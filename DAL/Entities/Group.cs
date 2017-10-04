@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAL.Entities;
 using Microsoft.Build.Framework;
 
 namespace DAL
@@ -24,5 +25,11 @@ namespace DAL
         public AppUser Admin { get; set; }
 
         public virtual ICollection<AppUser> Members { get; set; }
+
+        public Group()
+        {
+            this.Members = new HashSet<AppUser>();
+        }
+
     }
 }
