@@ -23,6 +23,6 @@ namespace DAL
 
         public AppUser Admin { get; set; }
 
-
+        public virtual ICollection<AppUser> Members { get; set; }
     }
 }
