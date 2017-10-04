@@ -43,6 +43,7 @@ namespace DAL.IdentityEntities
         public string Surname { get; set; }
 
         public Gender Gender { get; set; }
+        public Boolean hidden { get; set; }
 
         public virtual ICollection<AppUser> Friends { get; set; }
         public virtual ICollection<Event> Events { get; set; }
