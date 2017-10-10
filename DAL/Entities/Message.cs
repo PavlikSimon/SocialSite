@@ -8,7 +8,7 @@ using Microsoft.Build.Framework;
 
 namespace DAL.Entities
 {
-    public class Message
+    public class Message : IEntity
     {
         [Required]
         public int Id { get; set; }

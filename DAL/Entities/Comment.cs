@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DAL.Entities
 {
-    public class Comment
+    public class Comment : IEntity
     {
         [Required]
         public int Id { get; set; }

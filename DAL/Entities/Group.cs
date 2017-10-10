@@ -9,7 +9,7 @@ using Microsoft.Build.Framework;
 
 namespace DAL
 {
-    public class Group
+    public class Group : IEntity
     {
         [Required]
         public int Id { get; set; }

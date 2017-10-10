@@ -22,5 +22,6 @@ namespace DAL
         public DbSet<Group> Groups { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<AppUser> AppUsers { get; set; }
+        public DbSet<Event> Events { get; set; }
     }
 }

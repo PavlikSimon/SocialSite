@@ -27,7 +27,7 @@ namespace DAL.IdentityEntities
     public class AppUserLogin : IdentityUserLogin<int>
     {
     }
-    public class AppUser : IdentityUser<int, AppUserLogin, AppUserRole, AppUserClaim>
+    public class AppUser : IdentityUser<int, AppUserLogin, AppUserRole, AppUserClaim>, IEntity
     {
         //public int Id { get; set; } - obsahuje dedena trieda
         [Required]

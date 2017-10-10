@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Entities
 {
-    public class Event
+    public class Event : IEntity
     {
         [Required]
         public int Id { get; set; }

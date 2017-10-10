@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Entities
 {
-    public class Status
+    public class Status : IEntity
     {
         [Required]
         //[Key] - defaulte je primarny kluc Id alebo ClassnameID
