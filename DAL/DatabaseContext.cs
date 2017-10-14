@@ -7,6 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+/*
+ * @authors Šimon Pavlík 422465, Honza Čech 445524
+ */
+
+
 namespace DAL
 {
     /// <summary>
@@ -22,5 +28,7 @@ namespace DAL
         public DbSet<Message> Messages { get; set; }
         public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<Event> Events { get; set; }
+
+        
     }
 }

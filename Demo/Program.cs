@@ -9,6 +9,11 @@ using DAL.Entities;
 using DAL.Enumerations;
 using DAL.IdentityEntities;
 
+/*
+ * @authors Šimon Pavlík 422465, Honza Čech 445524
+ */
+
+
 namespace Demo
 {
     class Program
