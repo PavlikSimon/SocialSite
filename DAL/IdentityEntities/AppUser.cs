@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +30,11 @@ namespace DAL.IdentityEntities
     }
     public class AppUser : IdentityUser<int, AppUserLogin, AppUserRole, AppUserClaim>, IEntity
     {
+        [Required]
+        [Index(IsUnique = true)]
+        [MaxLength(20)]
+        public override string UserName { get; set; }
+
         //public int Id { get; set; } - obsahuje dedena trieda
         [Required]
         public virtual AppUser CreatedBy { get; set; }
@@ -43,7 +49,7 @@ namespace DAL.IdentityEntities
         public string Surname { get; set; }
 
         public Gender Gender { get; set; }
-        public Boolean hidden { get; set; }
+        public Boolean Hidden { get; set; }
 
         public virtual ICollection<AppUser> Friends { get; set; }
         public virtual ICollection<Event> Events { get; set; }
