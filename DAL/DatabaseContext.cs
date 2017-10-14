@@ -29,6 +29,33 @@ namespace DAL
         public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<Event> Events { get; set; }
 
-        
+        /* public static System.Data.Entity.DbModelBuilder CreateModel(System.Data.Entity.DbModelBuilder modelBuilder,
+     string schema)
+ {
+     //modelBuilder.Entity<Status>().WillCascadeOnDelete(true);
+     modelBuilder.Entity<AppUser>()
+         .HasOptional<AppUser>(s => s.Statuses)
+         .WithMany()
+         .WillCascadeOnDelete(true);
+ }*/
+        //OnModelCreating(DbModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<Student>()
+        //        .HasOptional<Standard>(s => s.Standard)
+        //        .WithMany()
+        //        .WillCascadeOnDelete(false);
+        //}
+        /* static DatabaseContext()
+         {
+             System.Data.Entity.Database.SetInitializer(new System.Data.Entity.MigrateDatabaseToLatestVersion<DatabaseContext, Configuration>());
+         }
+
+         public DatabaseContext()
+             : base("Name=EzapDbContext")
+         {
+             InitializePartial();
+         }
+
+         partial void InitializePartial();*/
     }
 }
