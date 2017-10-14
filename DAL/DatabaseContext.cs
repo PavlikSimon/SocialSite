@@ -16,7 +16,6 @@ namespace DAL
     /// public database context
     public class DatabaseContext : DbContext
     {
-        public DatabaseContext() { }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Status> Statuses { get; set; }
         public DbSet<Group> Groups { get; set; }
