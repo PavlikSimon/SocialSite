@@ -13,15 +13,11 @@ namespace DAL.Entities
         [Required]
         public int Id { get; set; }
         [Required]
-        public virtual AppUser CreatedBy { get; set; }
-        public virtual AppUser ModifiedBy { get; set; }
-        [Required]
         public DateTime CreatedOn { get; set; }
-        public DateTime ModifiedOn { get; set; }
         [Required]
-        public AppUser From { get; set; }
+        public AppUser Sender { get; set; }
         [Required]
-        public AppUser To { get; set; }
+        public AppUser Receiver { get; set; }
 
     }
 }

@@ -13,9 +13,11 @@ namespace DAL.Entities
         [Required]
         //[Key] - defaulte je primarny kluc Id alebo ClassnameID
         public int Id { get; set; }
-        [Required]
+
+        
+        //[Required]
         public virtual AppUser CreatedBy { get; set; }
-        public virtual AppUser ModifiedBy { get; set; }
+
         [Required]
         public DateTime CreatedOn { get; set; }
         public DateTime ModifiedOn { get; set; }
@@ -27,11 +29,12 @@ namespace DAL.Entities
         [Required]
 		public Boolean Private { get; set; }
 
+
         public virtual ICollection<Comment> Comments { get; set; }
 
-         public Status()
+        public Status()
          {
              this.Comments = new HashSet<Comment>();
-         }
+        }
     }
 }

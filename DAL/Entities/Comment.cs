@@ -15,7 +15,8 @@ namespace DAL.Entities
         public int Id { get; set; }
         [Required]
         public virtual AppUser CreatedBy { get; set; }
-        public virtual AppUser ModifiedBy { get; set; }
+
+
         [Required]
         public DateTime CreatedOn { get; set; }
         public DateTime ModifiedOn { get; set; }
