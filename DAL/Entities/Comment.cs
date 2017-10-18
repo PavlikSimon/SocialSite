@@ -6,10 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using Riganti.Utils.Infrastructure.Core;
 
 namespace DAL.Entities
 {
-    public class Comment : IEntity
+    public class Comment : IEntity<int>
     {
         [Required]
         public int Id { get; set; }

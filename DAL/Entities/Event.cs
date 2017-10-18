@@ -5,10 +5,11 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Riganti.Utils.Infrastructure.Core;
 
 namespace DAL.Entities
 {
-    public class Event : IEntity
+    public class Event : IEntity<int>
     {
         [Required]
         public int Id { get; set; }

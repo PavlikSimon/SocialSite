@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity.EntityFramework;
 using DAL.Entities;
 using DAL.Enumerations;
+using Riganti.Utils.Infrastructure.Core;
 
 namespace DAL.IdentityEntities
 {
@@ -31,7 +32,7 @@ namespace DAL.IdentityEntities
         public int Id { get; set; }
     }
 
-    public class AppUser : IdentityUser<int, AppUserLogin, AppUserRole, AppUserClaim>,IEntity
+    public class AppUser : IdentityUser<int, AppUserLogin, AppUserRole, AppUserClaim>, IEntity<int>
     {
         [Required]
         [Index(IsUnique = true)]

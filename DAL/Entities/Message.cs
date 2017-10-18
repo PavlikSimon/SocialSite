@@ -5,10 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Build.Framework;
+using Riganti.Utils.Infrastructure.Core;
 
 namespace DAL.Entities
 {
-    public class Message : IEntity
+    public class Message : IEntity<int>
     {
         [Required]
         public int Id { get; set; }
