@@ -5,10 +5,11 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Riganti.Utils.Infrastructure.Core;
 
 namespace DAL.Entities
 {
-    public class Status : IEntity
+    public class Status : IEntity<int>
     {
         [Required]
         //[Key] - defaulte je primarny kluc Id alebo ClassnameID

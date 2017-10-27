@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Riganti.Utils.Infrastructure.Core;
 
 namespace DAL.Repositories
 {
-    public interface IRepository<T> where T : IEntity
+    public interface IRepository<T> where T : IEntity<int>
     {
         void Add(T entity);
 

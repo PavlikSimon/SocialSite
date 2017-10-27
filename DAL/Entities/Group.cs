@@ -6,10 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL.Entities;
 using Microsoft.Build.Framework;
+using Riganti.Utils.Infrastructure.Core;
 
 namespace DAL
 {
-    public class Group : IEntity
+    public class Group : IEntity<int>
     {
         [Required]
         public int Id { get; set; }
