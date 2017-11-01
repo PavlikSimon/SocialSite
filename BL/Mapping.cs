@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 using BL.DTO;
+using DAL;
 using DAL.Entities;
 using DAL.IdentityEntities;
 
