@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Riganti.Utils.Infrastructure.Core;
 
 namespace BL.DTO
 {
@@ -17,5 +18,6 @@ namespace BL.DTO
         public AppUserDTO Sender { get; set; }
         //[Required]
         public AppUserDTO Receiver { get; set; }
+
     }
 }
