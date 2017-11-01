@@ -8,6 +8,7 @@ using DAL;
 using DAL.Entities;
 using DAL.Enumerations;
 using DAL.IdentityEntities;
+using Riganti.Utils.Infrastructure.Core;
 
 /*
  * @authors Šimon Pavlík 422465, Honza Čech 445524
@@ -63,6 +64,7 @@ namespace Demo
                 Console.WriteLine($"Name: {user.UserName} \n {user.Statuses.First().Text}");
                 Console.ReadLine();
             }
+            
         }
     }
 }

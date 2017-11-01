@@ -1,7 +1,6 @@
 ﻿ 
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,20 +9,20 @@ namespace BL.DTO
 {
     public class GroupDTO
     {
-        [Required]
+        //[Required]
         public int Id { get; set; }
-        [Required]
+        //[Required]
         public DateTime CreatedOn { get; set; }
         public DateTime ModifiedOn { get; set; }
 
-        [Required]
+        //[Required]
         public string Name { get; set; }
         public string Description { get; set; }
 
-        [Required]
+        //[Required]
         public Boolean Private { get; set; }
 
-        [Required]
+        //[Required]
         public AppUserDTO Admin { get; set; }
 
         public   ICollection<AppUserDTO> Members { get; set; }

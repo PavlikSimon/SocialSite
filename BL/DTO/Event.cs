@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,22 +8,22 @@ namespace BL.DTO
 {
     public class EventDTO
     {
-        [Required]
+        //[Required]
         public int Id { get; set; }
-        [Required]
+        //[Required]
         public virtual AppUserDTO Admin { get; set; }
 
 
-        [Required]
+        //[Required]
         public DateTime CreatedOn { get; set; }
         public DateTime ModifiedOn { get; set; }
 
-        [MaxLength(50)]
+        //[MaxLength(50)]
         public string Name { get; set; }
         public string Description { get; set; }
 
 
-        [MaxLength(150)]
+        //[MaxLength(150)]
         public string Text { get; set; }
         public DateTime Time { get; set; }
 

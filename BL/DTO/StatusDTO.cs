@@ -1,7 +1,6 @@
 ﻿ 
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,22 +9,22 @@ namespace BL.DTO
 {
     public class StatusDTO
     {
-        [Required]
+        //[Required]
         public int Id { get; set; }
 
 
         //[Required]
         public virtual AppUserDTO CreatedBy { get; set; }
 
-        [Required]
+        //[Required]
         public DateTime CreatedOn { get; set; }
         public DateTime ModifiedOn { get; set; }
 
-        [MaxLength(150)]
-        [Required]
+        //[MaxLength(150)]
+        //[Required]
         public string Text { get; set; }
 
-        [Required]
+        //[Required]
         public Boolean Private { get; set; }
 
 

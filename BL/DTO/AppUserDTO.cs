@@ -1,23 +1,22 @@
 ﻿ 
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAL.Enumerations;
 
 namespace BL.DTO
 {
     public class AppUserDTO
     {
-        [Required]
-        [Index(IsUnique = true)]
-        [MaxLength(20)]
-        public override string UserName { get; set; }
+        //[Required]
+        //[MaxLength(20)]
+        public string UserName { get; set; }
 
-        [MaxLength(50)]
+        //[MaxLength(50)]
         public string Name { get; set; }
-        [MaxLength(50)]
+        //[MaxLength(50)]
         public string Surname { get; set; }
 
         public Gender Gender { get; set; }
