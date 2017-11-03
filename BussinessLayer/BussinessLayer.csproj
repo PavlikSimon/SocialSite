@@ -49,6 +49,7 @@
     <Compile Include="DTO\GroupDTO.cs" />
     <Compile Include="DTO\MessageDTO.cs" />
     <Compile Include="DTO\StatusDTO.cs" />
+    <Compile Include="DTO\Enumerations\Gender.cs" />
     <Compile Include="Mapping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
