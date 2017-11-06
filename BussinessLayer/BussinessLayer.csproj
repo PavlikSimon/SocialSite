@@ -48,6 +48,7 @@
     <Compile Include="DTO\Event.cs" />
     <Compile Include="DTO\GroupDTO.cs" />
     <Compile Include="DTO\MessageDTO.cs" />
+    <Compile Include="DTO\NewAppUserDto.cs" />
     <Compile Include="DTO\StatusDTO.cs" />
     <Compile Include="Mapping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -68,6 +69,10 @@
       <Project>{049128c8-f21f-489c-8fe4-7324be92b056}</Project>
       <Name>Riganti.Utils.Infrastructure.Services</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="QueryObjects\" />
+    <Folder Include="Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
