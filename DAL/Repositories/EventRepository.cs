@@ -1,34 +1,18 @@
 ﻿using DAL.Entities;
 using DAL.Infrastructure;
+using Riganti.Utils.Infrastructure.Core;
+using Riganti.Utils.Infrastructure.EntityFramework;
 
 namespace DAL.Repositories
 {
-    public class EventRepository : IRepository<Event>
-    {
-        private IUnitOfWorkProvider unitOfWorkProvider;
-
-        public DatabaseContext Context =>
-            ((EntityFrameworkUnitOfWork)unitOfWorkProvider.GetUnitOfWorkInstance()).GetContext();
-
-        public void Add(Event entity)
+    
+        public class EventRepository : EntityFrameworkRepository<Event, int, DatabaseContext>  //IRepository<Status>
         {
-            Context.Events.Add(entity);
-        }
 
-        public Event GetById(int id)
-        {
-            return Context.Events.Find(id);
-        }
+            public EventRepository(Riganti.Utils.Infrastructure.Core.IUnitOfWorkProvider unitOfWorkProvider, IDateTimeProvider dateTimeProvider)
+                : base(unitOfWorkProvider, dateTimeProvider)
+            {
+            }
 
-        public void Delete(Event entity)
-        {
-            Context.Events.Remove(entity);
-        }
-
-        public void Update(Event entity)
-        {
-            var foundEvent = Context.Events.Find(entity.Id);
-            Context.Entry(foundEvent).CurrentValues.SetValues(entity);
         }
     }
-}
