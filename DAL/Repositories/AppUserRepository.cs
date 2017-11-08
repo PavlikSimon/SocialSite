@@ -1,33 +1,17 @@
 ﻿using DAL.IdentityEntities;
 using DAL.Infrastructure;
+using Riganti.Utils.Infrastructure.Core;
+using Riganti.Utils.Infrastructure.EntityFramework;
 
 namespace DAL.Repositories
 {
-    public class AppUserRepository : IRepository<AppUser>
+    public class AppUserRepository : EntityFrameworkRepository<AppUser, int, DatabaseContext>  //IRepository<Status>
     {
-        private IUnitOfWorkProvider unitOfWorkProvider;
 
-        public DatabaseContext Context =>
-            ((EntityFrameworkUnitOfWork)unitOfWorkProvider.GetUnitOfWorkInstance()).GetContext();
-        
-        public void Add(AppUser entity)
+        public AppUserRepository(Riganti.Utils.Infrastructure.Core.IUnitOfWorkProvider unitOfWorkProvider, IDateTimeProvider dateTimeProvider)
+            : base(unitOfWorkProvider, dateTimeProvider)
         {
-            throw new System.NotImplementedException();
         }
 
-        public AppUser GetById(int id)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void Delete(AppUser entity)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void Update(AppUser entity)
-        {
-            throw new System.NotImplementedException();
-        }
     }
 }

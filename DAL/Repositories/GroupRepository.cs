@@ -1,32 +1,17 @@
-﻿using DAL.Infrastructure;
+﻿using DAL.Entities;
+using DAL.Infrastructure;
+using Riganti.Utils.Infrastructure.Core;
+using Riganti.Utils.Infrastructure.EntityFramework;
 
 namespace DAL.Repositories
 {
-    public class GroupRepository : IRepository<Group>
+    public class GroupRepository : EntityFrameworkRepository<Group, int, DatabaseContext>  //IRepository<Status>
     {
-        private IUnitOfWorkProvider unitOfWorkProvider;
 
-        public DatabaseContext Context =>
-            ((EntityFrameworkUnitOfWork)unitOfWorkProvider.GetUnitOfWorkInstance()).GetContext();
-
-        public void Add(Group entity)
+        public GroupRepository(Riganti.Utils.Infrastructure.Core.IUnitOfWorkProvider unitOfWorkProvider, IDateTimeProvider dateTimeProvider)
+            : base(unitOfWorkProvider, dateTimeProvider)
         {
-            throw new System.NotImplementedException();
         }
 
-        public Group GetById(int id)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void Delete(Group entity)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void Update(Group entity)
-        {
-            throw new System.NotImplementedException();
-        }
     }
 }
