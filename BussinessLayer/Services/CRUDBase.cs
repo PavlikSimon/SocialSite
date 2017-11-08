@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
+using BussinessLayer.DataTransferObjects.Common;
 using BussinessLayer.Filters;
 using BussinessLayer.QueryObjects;
 using DAL.Repositories;
@@ -15,7 +16,7 @@ namespace BussinessLayer.Services
     public abstract class CrudQueryServiceBase<TEntity, TDto, TFilterDto> : ServiceBase
         where TFilterDto : FilterDtoBase, new()
         where TEntity : class, IEntity<>, new()
-        where TDto : DtoBase
+        where TDto : DTOBase
     {
         protected readonly IRepository<TEntity> Repository;
 
