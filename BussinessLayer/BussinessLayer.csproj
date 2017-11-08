@@ -50,6 +50,7 @@
     <Compile Include="DTO\MessageDTO.cs" />
     <Compile Include="DTO\StatusDTO.cs" />
     <Compile Include="DTO\Enumerations\Gender.cs" />
+    <Compile Include="Facades\Common\FacadeBase.cs" />
     <Compile Include="Mapping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -71,7 +72,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Facades\" />
     <Folder Include="Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
