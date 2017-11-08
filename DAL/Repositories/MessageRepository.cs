@@ -1,10 +1,18 @@
 ﻿using DAL.Entities;
 using DAL.Infrastructure;
+using Riganti.Utils.Infrastructure.Core;
+using Riganti.Utils.Infrastructure.EntityFramework;
 
 namespace DAL.Repositories
 {
-    public class MessageRepository : IRepository<Message>
+    public class MessageRepository : EntityFrameworkRepository<Message, int, DatabaseContext> //: IRepository<Message>
     {
+        public MessageRepository(Riganti.Utils.Infrastructure.Core.IUnitOfWorkProvider unitOfWorkProvider, IDateTimeProvider dateTimeProvider)
+            : base(unitOfWorkProvider, dateTimeProvider)
+        {
+        }
+
+        /*
         private IUnitOfWorkProvider unitOfWorkProvider;
 
         public DatabaseContext Context =>
@@ -28,6 +36,6 @@ namespace DAL.Repositories
         public void Update(Message entity)
         {
             throw new System.NotImplementedException();
-        }
+        }*/
     }
 }

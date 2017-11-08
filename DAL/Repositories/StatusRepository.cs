@@ -1,16 +1,25 @@
 ﻿using DAL.Entities;
-using DAL.Infrastructure;
+using Riganti.Utils.Infrastructure.Core;
+using Riganti.Utils.Infrastructure.EntityFramework;
 
 namespace DAL.Repositories
 {
-    public class StatusRepository : IRepository<Status>
+    public class StatusRepository : EntityFrameworkRepository<Status, int, DatabaseContext>  //IRepository<Status>
     {
-        private IUnitOfWorkProvider unitOfWorkProvider;
 
-        public DatabaseContext Context =>
+        public StatusRepository(Riganti.Utils.Infrastructure.Core.IUnitOfWorkProvider unitOfWorkProvider, IDateTimeProvider dateTimeProvider)
+            : base(unitOfWorkProvider, dateTimeProvider)
+        {
+        }
+
+
+
+        // private IUnitOfWorkProvider unitOfWorkProvider;
+
+        /*public DatabaseContext Context =>
             ((EntityFrameworkUnitOfWork)unitOfWorkProvider.GetUnitOfWorkInstance()).GetContext();
 
-        public void Add(Status entity)
+                public void Add(Status entity)
         {
             throw new System.NotImplementedException();
         }
@@ -29,5 +38,7 @@ namespace DAL.Repositories
         {
             throw new System.NotImplementedException();
         }
+*/
+
     }
 }
