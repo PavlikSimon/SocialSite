@@ -63,6 +63,10 @@
       <Project>{104c0cd3-2c63-4e22-9a2b-5e6e8fc311d3}</Project>
       <Name>DAL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Infrastructure\Riganti.Utils.Infrastructure.Core\Riganti.Utils.Infrastructure.Core.csproj">
+      <Project>{a0e083f9-3e3e-4624-85cb-a5b0fb5d276d}</Project>
+      <Name>Riganti.Utils.Infrastructure.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Infrastructure\Riganti.Utils.Infrastructure.Services\Riganti.Utils.Infrastructure.Services.csproj">
       <Project>{049128c8-f21f-489c-8fe4-7324be92b056}</Project>
       <Name>Riganti.Utils.Infrastructure.Services</Name>
