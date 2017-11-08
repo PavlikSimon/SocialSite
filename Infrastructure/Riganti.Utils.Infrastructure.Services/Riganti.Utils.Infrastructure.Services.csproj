@@ -31,10 +31,6 @@
     <None Remove="Mailing\**" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Riganti.Utils.Infrastructure.Core\Riganti.Utils.Infrastructure.Core.csproj" />
-  </ItemGroup>
-
   <ItemGroup Condition=" '$(TargetFramework)' == 'net461' ">
     <Reference Include="System" />
     <Reference Include="Microsoft.CSharp" />

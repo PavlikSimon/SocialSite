@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2002
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{104C0CD3-2C63-4E22-9A2B-5E6E8FC311D3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", "{36A8DFD8-0B7C-4697-B625-10FE9A32AC7F}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Riganti.Utils.Infrastructure.Core", "Infrastructure\Riganti.Utils.Infrastructure.Core\Riganti.Utils.Infrastructure.Core.csproj", "{D5D39746-15AD-4108-ABB4-2467EAD89EA9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Riganti.Utils.Infrastructure.EntityFramework", "Infrastructure\Riganti.Utils.Infrastructure.EntityFramework\Riganti.Utils.Infrastructure.EntityFramework.csproj", "{F00EFB05-01D0-43FA-9ECC-08A8F1C2812B}"
 EndProject
@@ -39,10 +37,6 @@ Global
 		{36A8DFD8-0B7C-4697-B625-10FE9A32AC7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36A8DFD8-0B7C-4697-B625-10FE9A32AC7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36A8DFD8-0B7C-4697-B625-10FE9A32AC7F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D5D39746-15AD-4108-ABB4-2467EAD89EA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D5D39746-15AD-4108-ABB4-2467EAD89EA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D5D39746-15AD-4108-ABB4-2467EAD89EA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D5D39746-15AD-4108-ABB4-2467EAD89EA9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F00EFB05-01D0-43FA-9ECC-08A8F1C2812B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F00EFB05-01D0-43FA-9ECC-08A8F1C2812B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F00EFB05-01D0-43FA-9ECC-08A8F1C2812B}.Release|Any CPU.ActiveCfg = Release|Any CPU
