@@ -56,8 +56,13 @@
     <Compile Include="Facades\Common\FacadeBase.cs" />
     <Compile Include="Filters\AppUserFilterDto.cs" />
     <Compile Include="Filters\FilterDtoBase.cs" />
+    <Compile Include="Facades\AppUserFacade.cs" />
     <Compile Include="Mapping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AppUserService\AppUserService.cs" />
+    <Compile Include="Services\AppUserService\IAppUserService.cs" />
+    <Compile Include="Services\CRUDBase.cs" />
+    <Compile Include="Services\ServiceBase.cs" />
     <Compile Include="QueryObjects\AppUserQueryObject.cs" />
     <Compile Include="QueryObjects\QueryObjectBase.cs" />
     <Compile Include="QueryObjects\QueryResultDto.cs" />
@@ -84,6 +89,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="QueryObjects\" />
     <Folder Include="Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
