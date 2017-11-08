@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.7
+VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{104C0CD3-2C63-4E22-9A2B-5E6E8FC311D3}"
 EndProject
@@ -22,6 +22,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BussinessLayer", "BussinessLayer\BussinessLayer.csproj", "{4B08816A-0E3D-4090-BF45-CB964B6B66C5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Riganti.Utils.Infrastructure.Core", "Infrastructure\Riganti.Utils.Infrastructure.Core\Riganti.Utils.Infrastructure.Core.csproj", "{A0E083F9-3E3E-4624-85CB-A5B0FB5D276D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryInfrastracture", "QueryInfrastracture\QueryInfrastracture.csproj", "{1DC614D8-28E7-4465-99F3-A1911DFC9B77}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{A0E083F9-3E3E-4624-85CB-A5B0FB5D276D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0E083F9-3E3E-4624-85CB-A5B0FB5D276D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0E083F9-3E3E-4624-85CB-A5B0FB5D276D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DC614D8-28E7-4465-99F3-A1911DFC9B77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DC614D8-28E7-4465-99F3-A1911DFC9B77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DC614D8-28E7-4465-99F3-A1911DFC9B77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DC614D8-28E7-4465-99F3-A1911DFC9B77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
