@@ -88,10 +88,6 @@
       <Project>{a0e083f9-3e3e-4624-85cb-a5b0fb5d276d}</Project>
       <Name>Riganti.Utils.Infrastructure.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Infrastructure\Riganti.Utils.Infrastructure.EntityFrameworkCore\Riganti.Utils.Infrastructure.EntityFrameworkCore.csproj">
-      <Project>{8aa26aaf-99e8-4c3d-9860-a4dbfd9e01a4}</Project>
-      <Name>Riganti.Utils.Infrastructure.EntityFrameworkCore</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Infrastructure\Riganti.Utils.Infrastructure.EntityFramework\Riganti.Utils.Infrastructure.EntityFramework.csproj">
       <Project>{f00efb05-01d0-43fa-9ecc-08a8f1c2812b}</Project>
       <Name>Riganti.Utils.Infrastructure.EntityFramework</Name>
