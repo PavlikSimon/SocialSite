@@ -50,6 +50,8 @@
     <Compile Include="DTO\MessageDTO.cs" />
     <Compile Include="DTO\NewAppUserDto.cs" />
     <Compile Include="DTO\StatusDTO.cs" />
+    <Compile Include="DTO\Enumerations\Gender.cs" />
+    <Compile Include="Facades\Common\FacadeBase.cs" />
     <Compile Include="Mapping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
