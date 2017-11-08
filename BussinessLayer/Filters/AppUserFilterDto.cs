@@ -1,4 +1,4 @@
-﻿namespace BL.Filters
+﻿namespace BussinessLayer.Filters
 {
     public class AppUserFilterDto : FilterDtoBase
     {

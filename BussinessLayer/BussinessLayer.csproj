@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="DTO\AppUserDTO.cs" />
     <Compile Include="DTO\CommentDTO.cs" />
+    <Compile Include="DTO\DTOBase.cs" />
     <Compile Include="DTO\Event.cs" />
     <Compile Include="DTO\GroupDTO.cs" />
     <Compile Include="DTO\MessageDTO.cs" />
@@ -88,9 +89,6 @@
       <Name>QueryInfrastracture</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="QueryObjects\" />
-    <Folder Include="Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

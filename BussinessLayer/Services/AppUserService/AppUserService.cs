@@ -10,18 +10,18 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using BL.DTO;
 using BussinessLayer.DTO;
+using BussinessLayer.Filters;
 using DAL.IdentityEntities;
 
 namespace BussinessLayer.Services.AppUserService
-{/*
-    public class AppUserService : CRUDBase<AppUser, AppUserDTO, CustomerFilterDto>, ICustomerService
+{
+    public class AppUserService : CRUDBase<AppUser, AppUserDTO, AppUserFilterDto>, IAppUserService
     {
-        public AppUserService(IMapper mapper, IRepository<AppUser > appUserRepository, CRUDBase<AppUserDto, AppUser, CustomerFilterDto, IQuery<AppUser>> customerQueryObject)
+        public AppUserService(IMapper mapper, IRepository<AppUser > appUserRepository, CRUDBase<AppUserDto, AppUser, AppUserFilterDto, IQuery<AppUser>> appUserQueryObject)
             : base(mapper, appUserRepository, customerQueryObject) { }
 
-        protected override async Task<Customer> GetWithIncludesAsync(Guid entityId)
+        protected override async Task<AppUser> GetWithIncludesAsync(int entityId)
         {
             return await Repository.GetAsync(entityId);
         }
@@ -36,5 +36,5 @@ namespace BussinessLayer.Services.AppUserService
             var queryResult = await Query.ExecuteQuery(new CustomerFilterDto { Email = email });
             return queryResult.Items.SingleOrDefault();
         }
-    }*/
+    }
 }

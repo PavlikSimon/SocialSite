@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BL.DTO.Enumerations
+namespace BussinessLayer.DTO.Enumerations
 {
     public enum Gender : int
     {

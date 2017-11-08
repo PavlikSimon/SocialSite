@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using BussinessLayer.DataTransferObjects.Common;
 
 
-namespace BL.DTO
+namespace BussinessLayer.DTO 
 {
-    public class CommentDTO
+    public class CommentDTO : DTOBase
     {
-            //[Required]
-            public int Id { get; set; }
             //[Required]
             public virtual AppUserDTO CreatedBy { get; set; }
 

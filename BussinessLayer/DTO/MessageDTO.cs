@@ -4,14 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BussinessLayer.DataTransferObjects.Common;
 using Riganti.Utils.Infrastructure.Core;
 
-namespace BL.DTO
+namespace BussinessLayer.DTO
 {
-    public class MessageDTO
+    public class MessageDTO : DTOBase
     {
-        //[Required]
-        public int Id { get; set; }
         // [Required]
         public DateTime CreatedOn { get; set; }
         //[Required]

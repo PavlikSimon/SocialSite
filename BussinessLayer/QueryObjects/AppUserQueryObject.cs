@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
-using BL.DTO;
-using BL.Filters;
+using BussinessLayer.DTO;
+using BussinessLayer.Filters;
 using DAL.IdentityEntities;
 using QueryInfrastracture;
 
-namespace BL.QueryObjects
+namespace BussinessLayer.QueryObjects
 {
     public class AppUserQueryObject : QueryObjectBase<AppUserDTO, AppUser, AppUserFilterDto, IQuery<AppUser>>
     {

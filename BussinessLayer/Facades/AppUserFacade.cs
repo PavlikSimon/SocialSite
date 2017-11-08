@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BussinessLayer.QueryObjects;
 using BussinessLayer.Services.AppUserService;
 using DAL.Infrastructure;
 
@@ -16,6 +17,7 @@ namespace BussinessLayer.Facades
         {
             this.appUserService = appUserService;
         }
+
         /*
         /// <summary>
         /// Gets customer according to email
@@ -30,7 +32,8 @@ namespace BussinessLayer.Facades
                 return await customerService.GetCustomerAccordingToEmailAsync(fakeEmail);
             }
         }
-
+        */
+        /*
         /// <summary>
         /// Gets all customers according to page
         /// </summary>
@@ -42,7 +45,8 @@ namespace BussinessLayer.Facades
                 return await customerService.ListAllAsync();
             }
         }
-
+        */
+        /*
         ///// <summary>
         ///// Performs customer registration
         ///// </summary>

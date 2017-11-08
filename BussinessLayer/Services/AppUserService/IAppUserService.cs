@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BL.DTO;
+using BussinessLayer.DTO;
 
 namespace BussinessLayer.Services.AppUserService
 {

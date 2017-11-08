@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using BL.Filters;
+using BussinessLayer.Filters;
 
-namespace BL.QueryObjects
+namespace BussinessLayer.QueryObjects
 {
     public class QueryResultDto<TDto, TFilter> where TFilter : FilterDtoBase
     {

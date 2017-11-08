@@ -4,13 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BussinessLayer.DataTransferObjects.Common;
 
-namespace BL.DTO
+namespace BussinessLayer.DTO
 {
-    public class GroupDTO
+    public class GroupDTO : DTOBase
     {
-        //[Required]
-        public int Id { get; set; }
         //[Required]
         public DateTime CreatedOn { get; set; }
         public DateTime ModifiedOn { get; set; }

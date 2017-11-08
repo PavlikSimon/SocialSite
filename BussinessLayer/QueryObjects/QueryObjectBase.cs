@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
 using AutoMapper;
-using BL.Filters;
+using BussinessLayer.Filters;
 using Riganti.Utils.Infrastructure.Core;
 
-namespace BL.QueryObjects
+namespace BussinessLayer.QueryObjects
 {
     public abstract class QueryObjectBase<TDto, TEntity, TFilter, TQuery>
         where TFilter : FilterDtoBase
