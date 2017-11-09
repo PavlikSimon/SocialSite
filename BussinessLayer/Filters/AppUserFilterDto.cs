@@ -2,6 +2,6 @@
 {
     public class AppUserFilterDto : FilterDtoBase
     {
-        
+        public string Email;
     }
 }

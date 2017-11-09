@@ -31,6 +31,11 @@ namespace DAL.Entities
 		public Boolean Private { get; set; }
 
 
+        public virtual Group Group { get; set; }
+
+        public virtual Event Event { get; set; }
+
+
         public virtual ICollection<Comment> Comments { get; set; }
 
         public Status()

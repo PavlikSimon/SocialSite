@@ -67,6 +67,8 @@
     <Compile Include="DTO\Enumerations\Gender.cs" />
     <Compile Include="Facades\Common\FacadeBase.cs" />
     <Compile Include="Filters\AppUserFilterDto.cs" />
+    <Compile Include="Filters\CommentFilterDto.cs" />
+    <Compile Include="Filters\EventFilterDto.cs" />
     <Compile Include="Filters\FilterDtoBase.cs" />
     <Compile Include="Facades\AppUserFacade.cs" />
     <Compile Include="Mapping.cs" />
