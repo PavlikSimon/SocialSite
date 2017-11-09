@@ -9,32 +9,32 @@ using BussinessLayer.Filters;
 using BussinessLayer.QueryObjects;
 using DAL.Repositories;
 using Riganti.Utils.Infrastructure.Core;
- 
+using QueryInfrastracture;
 
 namespace BussinessLayer.Services
 {
     public abstract class CRUDBase<TEntity, TDto, TFilterDto> : ServiceBase
         where TFilterDto : FilterDtoBase, new()
-        where TEntity : class, IEntity<>, new()
+        where TEntity : class, IEntity<int>, new()
         where TDto : DTOBase
     {
-        protected readonly IRepository<TEntity> Repository;
+        protected readonly IRepository<TEntity, int> Repository;
 
-        protected readonly QueryObjectBase<TDto, TEntity, TFilterDto, IQuery<TEntity>> Query;
+        protected readonly QueryObjectBase<TDto, TEntity, TFilterDto, QueryInfrastracture.IQuery<TEntity>> Query;
 
-        protected CRUDBase(IMapper mapper, IRepository<TEntity> repository, QueryObjectBase<TDto, TEntity, TFilterDto, IQuery<TEntity>> query) : base(mapper)
+        protected CRUDBase(IMapper mapper, IRepository<TEntity, int> repository, QueryObjectBase<TDto, TEntity, TFilterDto, QueryInfrastracture.IQuery<TEntity>> query) : base(mapper)
         {
             this.Query = query;
             this.Repository = repository;
         }
-        
+
         /// <summary>
         /// Gets DTO representing the entity according to ID
         /// </summary>
         /// <param name="entityId">entity ID</param>
         /// <param name="withIncludes">include all entity complex types</param>
         /// <returns>The DTO representing the entity</returns>
-        public virtual async Task<TDto> GetAsync(Guid entityId, bool withIncludes = true)
+        public virtual async Task<TDto> GetAsync(int entityId, bool withIncludes = true)
         {
             TEntity entity;
             if (withIncludes)
@@ -43,7 +43,7 @@ namespace BussinessLayer.Services
             }
             else
             {
-                entity = await Repository.GetAsync(entityId);
+                entity = await Repository.GetByIdAsync(entityId);
             }
             return entity != null ? Mapper.Map<TDto>(entity) : null;
         }
@@ -53,16 +53,16 @@ namespace BussinessLayer.Services
         /// </summary>
         /// <param name="entityId">entity ID</param>
         /// <returns>The DTO representing the entity</returns>
-        protected abstract Task<TEntity> GetWithIncludesAsync(Guid entityId);
+        protected abstract Task<TEntity> GetWithIncludesAsync(int entityId);
 
         /// <summary>
         /// Creates new entity
         /// </summary>
         /// <param name="entityDto">entity details</param>
-        public virtual Guid Create(TDto entityDto)
+        public virtual int Create(TDto entityDto)
         {
             var entity = Mapper.Map<TEntity>(entityDto);
-            Repository.Create(entity);
+            Repository.Insert(entity);
             return entity.Id;
         }
 
