@@ -1,6 +1,6 @@
 ﻿namespace BussinessLayer.Filters
 {
-    public class EventFilterDto : FilterDtoBase
+    public class MessageFilterDto : FilterDtoBase
     {
         
     }
