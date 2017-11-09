@@ -99,6 +99,8 @@ namespace Riganti.Utils.Infrastructure.Core
         /// <remarks>This method is not suitable for large amounts of entities - the reasonable limit of number of IDs is 30.</remarks>
         Task<IList<TEntity>> GetByIdsAsync(CancellationToken cancellationToken, IEnumerable<TKey> ids, IIncludeDefinition<TEntity>[] includes);
 
+         Task<IList<TEntity>> GetAll();
+
         /// <summary>
         ///     Initializes a new entity with appropriate default values.
         /// </summary>

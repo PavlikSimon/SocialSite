@@ -317,5 +317,11 @@ namespace Riganti.Utils.Infrastructure.EntityFramework
                 Delete(id);
             }
         }
+
+        public async Task<IList<TEntity>> GetAll()
+        {
+            return await Context.Set<TEntity>().ToListAsync();
+        }
     }
+
 }
