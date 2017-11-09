@@ -7,20 +7,23 @@ using Riganti.Utils.Infrastructure.Core;
 using BussinessLayer.DTO;
 using BussinessLayer.Filters;
 using BussinessLayer.QueryObjects;
+using BussinessLayer.Services.GroupService;
+using DAL;
 using DAL.IdentityEntities;
 
-namespace BussinessLayer.Services.AppUserService
+namespace BussinessLayer.Services.GroupService
 {
-    public class AppUserService : CRUDBase<AppUser, AppUserDTO, AppUserFilterDto>, IAppUserService
+    public class GroupService : CRUDBase<Group, GroupDTO, GroupFilterDto>, IGroupService
     {
-        public AppUserService(IMapper mapper, IRepository<AppUser, int> appUserRepository, AppUserQueryObject appUserQueryObject)
-            : base(mapper, appUserRepository, appUserQueryObject) { }
+        public GroupService(IMapper mapper, IRepository<Group, int> groupRepository, GroupQueryObject groupQueryObject)
+            : base(mapper, groupRepository, groupQueryObject) { }
 
-        protected override async Task<AppUser> GetWithIncludesAsync(int entityId)
+        protected override async Task<Group> GetWithIncludesAsync(int entityId)
         {
             return await Repository.GetByIdAsync(entityId);
         }
 
+        /*
         /// <summary>
         /// Gets customer with given email address
         /// </summary>
@@ -37,5 +40,8 @@ namespace BussinessLayer.Services.AppUserService
         {
             throw new NotImplementedException();
         }
+        */
+
+
     }
 }

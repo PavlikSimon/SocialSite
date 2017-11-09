@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using BussinessLayer.DTO;
 
-namespace BussinessLayer.Services.AppUserService
+namespace BussinessLayer.Services.GroupService
 {
-    public interface IAppUserService
+    public interface IGroupService
     {
  
         /*
@@ -18,6 +18,6 @@ namespace BussinessLayer.Services.AppUserService
         Task<QueryResultDto<CustomerDto, CustomerFilterDto>> ListAllAsync();*/
 
 
-        void createFriendship(AppUserDTO user1, AppUserDTO user2);
+       // void createFriendship(AppUserDTO user1, AppUserDTO user2);
     }
 }
