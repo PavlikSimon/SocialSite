@@ -81,6 +81,8 @@
     <Compile Include="QueryObjects\StatusQueryObject.cs" />
     <Compile Include="QueryObjects\MessageQueryObject.cs" />
     <Compile Include="QueryObjects\GroupQueryObject.cs" />
+    <Compile Include="Services\MessageService\MessageService.cs" />
+    <Compile Include="Services\MessageService\IMessageService.cs" />
     <Compile Include="Services\GroupService\GroupService.cs" />
     <Compile Include="Services\GroupService\IGroupService.cs" />
     <Compile Include="Services\AppUserService\AppUserService.cs" />
