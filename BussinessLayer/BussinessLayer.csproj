@@ -76,6 +76,11 @@
     <Compile Include="Filters\StatusFilterDto.cs" />
     <Compile Include="Mapping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryObjects\EventQueryObject.cs" />
+    <Compile Include="QueryObjects\CommentQueryObject.cs" />
+    <Compile Include="QueryObjects\StatusQueryObject.cs" />
+    <Compile Include="QueryObjects\MessageQueryObject.cs" />
+    <Compile Include="QueryObjects\GroupQueryObject.cs" />
     <Compile Include="Services\AppUserService\AppUserService.cs" />
     <Compile Include="Services\AppUserService\IAppUserService.cs" />
     <Compile Include="Services\CRUDBase.cs" />
