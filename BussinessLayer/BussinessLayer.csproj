@@ -59,7 +59,7 @@
     <Compile Include="DTO\AppUserDTO.cs" />
     <Compile Include="DTO\CommentDTO.cs" />
     <Compile Include="DTO\DTOBase.cs" />
-    <Compile Include="DTO\Event.cs" />
+    <Compile Include="DTO\EventDTO.cs" />
     <Compile Include="DTO\GroupDTO.cs" />
     <Compile Include="DTO\MessageDTO.cs" />
     <Compile Include="DTO\NewAppUserDto.cs" />
