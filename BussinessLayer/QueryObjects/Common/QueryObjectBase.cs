@@ -3,7 +3,7 @@ using AutoMapper;
 using BussinessLayer.Filters;
 using Riganti.Utils.Infrastructure.Core;
 
-namespace BussinessLayer.QueryObjects
+namespace BussinessLayer.QueryObjects.Common
 {
     public abstract class QueryObjectBase<TDto, TEntity, TFilter, TQuery>
         where TFilter : FilterDtoBase

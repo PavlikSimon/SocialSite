@@ -1,8 +1,11 @@
 ﻿using AutoMapper;
 using BussinessLayer.DTO;
 using BussinessLayer.Filters;
+using BussinessLayer.QueryObjects.Common;
 using DAL.IdentityEntities;
 using QueryInfrastracture;
+using QueryInfrastracture.Predicates;
+using QueryInfrastracture.Predicates.Operators;
 
 namespace BussinessLayer.QueryObjects
 {
@@ -14,7 +17,12 @@ namespace BussinessLayer.QueryObjects
 
         protected override IQuery<AppUser> ApplyWhereClause(IQuery<AppUser> query, AppUserFilterDto filter)
         {
-            throw new System.NotImplementedException();
+            if (string.IsNullOrWhiteSpace(filter.Email))
+            {
+                return query;
+            }
+            return query.Where(new SimplePredicate(nameof(AppUser.Email), ValueComparingOperator.Equal, filter.Email));
+
         }
     }
 }

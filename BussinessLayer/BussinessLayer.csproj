@@ -78,8 +78,8 @@
     <Compile Include="Services\CRUDBase.cs" />
     <Compile Include="Services\ServiceBase.cs" />
     <Compile Include="QueryObjects\AppUserQueryObject.cs" />
-    <Compile Include="QueryObjects\QueryObjectBase.cs" />
-    <Compile Include="QueryObjects\QueryResultDto.cs" />
+    <Compile Include="QueryObjects\Common\QueryObjectBase.cs" />
+    <Compile Include="QueryObjects\Common\QueryResultDto.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

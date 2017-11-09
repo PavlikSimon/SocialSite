@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using BussinessLayer.Filters;
 
-namespace BussinessLayer.QueryObjects
+namespace BussinessLayer.QueryObjects.Common
 {
     public class QueryResultDto<TDto, TFilter> where TFilter : FilterDtoBase
     {

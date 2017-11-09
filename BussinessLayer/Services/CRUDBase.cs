@@ -7,6 +7,7 @@ using AutoMapper;
 using BussinessLayer.DataTransferObjects.Common;
 using BussinessLayer.Filters;
 using BussinessLayer.QueryObjects;
+using BussinessLayer.QueryObjects.Common;
 using DAL.Repositories;
 using Riganti.Utils.Infrastructure.Core;
 using QueryInfrastracture;
