@@ -11,6 +11,7 @@ namespace BussinessLayer.Services
     {
         protected readonly IMapper Mapper;
 
+
         protected ServiceBase(IMapper mapper)
         {
             this.Mapper = mapper;

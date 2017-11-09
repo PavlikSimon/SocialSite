@@ -10,7 +10,7 @@ namespace BussinessLayer.Services.AppUserService
 {
     public class AppUserService : CRUDBase<AppUser, AppUserDTO, AppUserFilterDto>, IAppUserService
     {
-        public AppUserService(IMapper mapper, IRepository<AppUser > appUserRepository, CRUDBase<AppUserDto, AppUser, AppUserFilterDto, IQuery<AppUser>> appUserQueryObject)
+        public AppUserService(IMapper mapper, IRepository<AppUser > appUserRepository, CRUDBase<AppUserDTO, AppUser, AppUserFilterDto, IQuery<AppUser>> appUserQueryObject)
             : base(mapper, appUserRepository, appUserQueryObject) { }
 
         protected override async Task<AppUser> GetWithIncludesAsync(int entityId)
