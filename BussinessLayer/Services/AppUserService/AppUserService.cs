@@ -28,7 +28,8 @@ namespace BussinessLayer.Services.AppUserService
         /// <returns>Customer with given email address</returns>
         public async Task<AppUserDTO> GetCustomerAccordingToEmailAsync(string email)
         {
-            
+            var users = await Repository.GetAll();
+            return  Mapper.Map<AppUser, AppUserDTO>(users.SingleOrDefault(a => a.Email == email));
         }
 
         public Task<AppUserDTO> GetAsync(int entityId)
@@ -36,10 +37,6 @@ namespace BussinessLayer.Services.AppUserService
             throw new NotImplementedException();
         }
 
-        public int Create(AppUserDTO entityDto)
-        {
-            throw new NotImplementedException();
-        }
 
         public void Delete(int entityId)
         {
