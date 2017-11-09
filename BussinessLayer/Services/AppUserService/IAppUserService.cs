@@ -40,5 +40,8 @@ namespace BussinessLayer.Services.AppUserService
         /// </summary>
         /// <returns>all available dtos (for given type)</returns>
         Task<QueryResultDto<CustomerDto, CustomerFilterDto>> ListAllAsync();*/
+
+
+        void createFriendship(AppUserDTO user1, AppUserDTO user2);
     }
 }
