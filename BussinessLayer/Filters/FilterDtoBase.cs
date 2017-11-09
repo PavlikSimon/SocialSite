@@ -23,4 +23,3 @@
         public bool SortAscending { get; set; }
     }
 }
-}
