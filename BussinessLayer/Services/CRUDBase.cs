@@ -13,7 +13,7 @@ using Riganti.Utils.Infrastructure.Core;
 
 namespace BussinessLayer.Services
 {
-    public abstract class CrudQueryServiceBase<TEntity, TDto, TFilterDto> : ServiceBase
+    public abstract class CRUDBase<TEntity, TDto, TFilterDto> : ServiceBase
         where TFilterDto : FilterDtoBase, new()
         where TEntity : class, IEntity<>, new()
         where TDto : DTOBase
@@ -22,12 +22,12 @@ namespace BussinessLayer.Services
 
         protected readonly QueryObjectBase<TDto, TEntity, TFilterDto, IQuery<TEntity>> Query;
 
-        protected CrudQueryServiceBase(IMapper mapper, IRepository<TEntity> repository, QueryObjectBase<TDto, TEntity, TFilterDto, IQuery<TEntity>> query) : base(mapper)
+        protected CRUDBase(IMapper mapper, IRepository<TEntity> repository, QueryObjectBase<TDto, TEntity, TFilterDto, IQuery<TEntity>> query) : base(mapper)
         {
             this.Query = query;
             this.Repository = repository;
         }
-
+        
         /// <summary>
         /// Gets DTO representing the entity according to ID
         /// </summary>
