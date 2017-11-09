@@ -7,7 +7,7 @@ using Riganti.Utils.Infrastructure.Core;
 
 namespace DAL.Repositories
 {
-    public interface IRepository<T> where T : IEntity<int>
+   /* public interface IRepository<T> where T : IEntity<int>
     {
         void Add(T entity);
 
@@ -16,5 +16,5 @@ namespace DAL.Repositories
         void Delete(T entity);
 
         void Update(T entity);
-    }
+    }*/
 }
