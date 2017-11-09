@@ -32,16 +32,6 @@ namespace BussinessLayer.Services.AppUserService
             return  Mapper.Map<AppUser, AppUserDTO>(users.SingleOrDefault(a => a.Email == email));
         }
 
-        public Task<AppUserDTO> GetAsync(int entityId)
-        {
-            throw new NotImplementedException();
-        }
-
-
-        public void Delete(int entityId)
-        {
-            throw new NotImplementedException();
-        }
 
         public void createFriendship(AppUserDTO user1, AppUserDTO user2)
         {
