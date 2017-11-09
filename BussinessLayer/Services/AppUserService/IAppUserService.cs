@@ -20,7 +20,7 @@ namespace BussinessLayer.Services.AppUserService
         /// Creates new entity
         /// </summary>
         /// <param name="entityDto">entity details</param>
-        Guid Create(AppUserDTO entityDto);
+        int Create(AppUserDTO entityDto);
 
         /// <summary>
         /// Updates entity
@@ -32,7 +32,7 @@ namespace BussinessLayer.Services.AppUserService
         /// Deletes entity with given Id
         /// </summary>
         /// <param name="entityId">Id of the entity to delete</param>
-        void Delete(Guid entityId);
+        void Delete(int entityId);
 
         /*
         /// <summary>
