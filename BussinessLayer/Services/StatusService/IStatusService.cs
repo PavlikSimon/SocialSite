@@ -7,12 +7,17 @@ using BussinessLayer.DTO;
 using BussinessLayer.Filters;
 using BussinessLayer.QueryObjects.Common;
 
-namespace BussinessLayer.Services.CommentService
+namespace BussinessLayer.Services.StatusService
 {
-    public interface ICommentService
+    public interface IStatusService
     {
- 
- 
+
+        //Task<IEnumerable<AppUserDTO>> ListUsersStatusesAsync(AppUserFilterDto filter);
+
+        
+
+
+
         // TODO - THIS COULD BE DELETED LATER 
         // after succesfull implement. of ICRUDBase generic interface
 
@@ -22,19 +27,19 @@ namespace BussinessLayer.Services.CommentService
         /// <param name="entityId">entity ID</param>
         /// <param name="withIncludes">include all entity complex types</param>
         /// <returns>The DTO representing the entity</returns>
-        Task<CommentDTO> GetAsync(int entityId, bool withIncludes = true);
+        Task<StatusDTO> GetAsync(int entityId, bool withIncludes = true);
 
         /// <summary>
         /// Creates new entity
         /// </summary>
         /// <param name="entityDto">entity details</param>
-        int Create(CommentDTO entityDto);
+        int Create(StatusDTO entityDto);
 
         /// <summary>
         /// Updates entity
         /// </summary>
         /// <param name="entityDto">entity details</param>
-        Task Update(CommentDTO entityDto);
+        Task Update(StatusDTO entityDto);
 
         /// <summary>
         /// Deletes entity with given Id
@@ -46,6 +51,6 @@ namespace BussinessLayer.Services.CommentService
         /// Gets all DTOs (for given type)
         /// </summary>
         /// <returns>all available dtos (for given type)</returns>
-        Task<QueryResultDto<CommentDTO, CommentFilterDto>> ListAllAsync();
+        Task<QueryResultDto<StatusDTO, StatusFilterDto>> ListAllAsync();
     }
 }

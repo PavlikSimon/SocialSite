@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
@@ -7,15 +8,23 @@ using Riganti.Utils.Infrastructure.Core;
 using BussinessLayer.DTO;
 using BussinessLayer.Filters;
 using BussinessLayer.QueryObjects;
+using BussinessLayer.QueryObjects.Common;
 using BussinessLayer.Services.GroupService;
 using DAL;
 using DAL.Entities;
 using DAL.IdentityEntities;
+using QueryInfrastracture;
+
 
 namespace BussinessLayer.Services.StatusService
 {
     public class StatusService : CRUDBase<Status, StatusDTO, StatusFilterDto>, IStatusService
     {
+        private readonly QueryObjectBase<AppUserDTO, AppUser, AppUserFilterDto, QueryInfrastracture.IQuery<AppUser>> appUserQueryObject;
+
+
+
+
         public StatusService(IMapper mapper, IRepository<Status, int> statusRepository, StatusQueryObject statusQueryObject)
             : base(mapper, statusRepository, statusQueryObject) { }
 
@@ -42,6 +51,14 @@ namespace BussinessLayer.Services.StatusService
             throw new NotImplementedException();
         }
         */
+
+            /*
+        public async Task<IEnumerable<AppUserDTO>> ListUsersStatusesAsync(AppUserFilterDto filter)
+        {
+            return (await appUserQueryObject.ExecuteQuery(filter)).Items;
+        }
+        */
+
 
 
     }

@@ -81,10 +81,11 @@
     <Compile Include="QueryObjects\StatusQueryObject.cs" />
     <Compile Include="QueryObjects\MessageQueryObject.cs" />
     <Compile Include="QueryObjects\GroupQueryObject.cs" />
-    <Compile Include="Services\StatusService\IMessageService.cs" />
-    <Compile Include="Services\StatusService\MessageService.cs" />
-    <Compile Include="Services\EventService\IMessageService.cs" />
-    <Compile Include="Services\EventService\MessageService.cs" />
+    <Compile Include="Services\ICRUDBase.cs" />
+    <Compile Include="Services\StatusService\IStatusService.cs" />
+    <Compile Include="Services\StatusService\StatusService.cs" />
+    <Compile Include="Services\EventService\IEventService.cs" />
+    <Compile Include="Services\EventService\EventService.cs" />
     <Compile Include="Services\CommentService\IMessageService.cs" />
     <Compile Include="Services\CommentService\MessageService.cs" />
     <Compile Include="Services\MessageService\MessageService.cs" />

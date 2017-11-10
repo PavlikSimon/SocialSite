@@ -7,12 +7,13 @@ using BussinessLayer.DTO;
 using BussinessLayer.Filters;
 using BussinessLayer.QueryObjects.Common;
 
-namespace BussinessLayer.Services.CommentService
+namespace BussinessLayer.Services.EventService
 {
-    public interface ICommentService
+    public interface IEventService
     {
- 
- 
+
+
+
         // TODO - THIS COULD BE DELETED LATER 
         // after succesfull implement. of ICRUDBase generic interface
 
@@ -22,19 +23,19 @@ namespace BussinessLayer.Services.CommentService
         /// <param name="entityId">entity ID</param>
         /// <param name="withIncludes">include all entity complex types</param>
         /// <returns>The DTO representing the entity</returns>
-        Task<CommentDTO> GetAsync(int entityId, bool withIncludes = true);
+        Task<EventDTO> GetAsync(int entityId, bool withIncludes = true);
 
         /// <summary>
         /// Creates new entity
         /// </summary>
         /// <param name="entityDto">entity details</param>
-        int Create(CommentDTO entityDto);
+        int Create(EventDTO entityDto);
 
         /// <summary>
         /// Updates entity
         /// </summary>
         /// <param name="entityDto">entity details</param>
-        Task Update(CommentDTO entityDto);
+        Task Update(EventDTO entityDto);
 
         /// <summary>
         /// Deletes entity with given Id
@@ -46,6 +47,6 @@ namespace BussinessLayer.Services.CommentService
         /// Gets all DTOs (for given type)
         /// </summary>
         /// <returns>all available dtos (for given type)</returns>
-        Task<QueryResultDto<CommentDTO, CommentFilterDto>> ListAllAsync();
+        Task<QueryResultDto<EventDTO, EventFilterDto>> ListAllAsync();
     }
 }

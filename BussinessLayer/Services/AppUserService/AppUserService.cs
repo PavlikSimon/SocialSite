@@ -26,7 +26,7 @@ namespace BussinessLayer.Services.AppUserService
         /// </summary>
         /// <param name="email">email</param>
         /// <returns>Customer with given email address</returns>
-        public async Task<AppUserDTO> GetCustomerAccordingToEmailAsync(string email)
+        public async Task<AppUserDTO> GetAppUserAccordingToEmailAsync(string email)
         {
             var users = await Repository.GetAll();
             return  Mapper.Map<AppUser, AppUserDTO>(users.SingleOrDefault(a => a.Email == email));
