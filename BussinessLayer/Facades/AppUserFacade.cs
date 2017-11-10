@@ -3,70 +3,62 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BussinessLayer.QueryObjects;
+using BussinessLayer.DTO;
+using BussinessLayer.Facades.Common;
+using BussinessLayer.Filters;
+using BussinessLayer.QueryObjects.Common;
 using BussinessLayer.Services.AppUserService;
-using DAL.Infrastructure;
+using BussinessLayer.Services.StatusService;
+using Riganti.Utils.Infrastructure.Core;
+
 
 namespace BussinessLayer.Facades
 {
-    public class AppUserFacade
+    public class AppUserFacade : FacadeBase
     {
         private readonly IAppUserService appUserService;
+        private readonly IStatusService statusService;
 
         public AppUserFacade(IUnitOfWorkProvider unitOfWorkProvider, IAppUserService appUserService) : base(unitOfWorkProvider)
         {
             this.appUserService = appUserService;
         }
 
-        /*
+        
         /// <summary>
         /// Gets customer according to email
         /// </summary>
         /// <param name="email"></param>
         /// <returns>Customer with specified email</returns>
-        public async Task<CustomerDto> GetCustomerAccordingToEmailAsync(string email)
-        {
-            const string fakeEmail = "daisy@gmail.com";
-            using (UnitOfWorkProvider.Create())
-            {
-                return await customerService.GetCustomerAccordingToEmailAsync(fakeEmail);
-            }
-        }
-        */
-        /*
-        /// <summary>
-        /// Gets all customers according to page
-        /// </summary>
-        /// <returns>all customers</returns>
-        public async Task<QueryResultDto<CustomerDto, CustomerFilterDto>> GetAllCustomersAsync()
+        public async Task<AppUserDTO> GetCustomerAccordingToEmailAsync(string email)
         {
             using (UnitOfWorkProvider.Create())
             {
-                return await customerService.ListAllAsync();
+                return await appUserService.GetAppUserAccordingToEmailAsync(email);
             }
         }
-        */
-        /*
-        ///// <summary>
-        ///// Performs customer registration
-        ///// </summary>
-        ///// <param name="registrationDto">Customer registration details</param>
-        ///// <param name="success">argument that tells whether the registration was successful</param>
-        ///// <returns>Registered customer account ID</returns>
-        //public Guid RegisterCustomer(UserRegistrationDto registrationDto, out bool success)
-        //{
-        //    // TODO...
+        
 
-        //    if (customerService.GetCustomerAccordingToEmailAsync(registrationDto.Email) != null)
-        //    {
-        //        success = false;
-        //        return new Guid();
-        //    }
-        //    var accountId = ...
-        //    customerService.CreateCustomer(accountId);
-        //    success = true;
-        //    return accountId;
-        //}
+        /// <summary>
+        /// Gets all appUsers according to page
+        /// </summary>
+        /// <returns>all appUsers</returns>
+        public async Task<QueryResultDto<AppUserDTO, AppUserFilterDto>> GetAllAppUsersAsync()
+        {
+            using (UnitOfWorkProvider.Create())
+            {
+                return await appUserService.ListAllAsync();
+            }
+        }
+
+        /*
+        public async Task<IEnumerable<StatusDTO>> ListAppUserStatusesAsync(StatusFilterDto filter)
+        {
+            using (UnitOfWorkProvider.Create())
+            {
+                return await statusService.ListUsersStatusesAsync(filter);
+            }
+        }
         */
     }
 }
