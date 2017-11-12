@@ -25,6 +25,15 @@ namespace BussinessLayer.Facades
             this.eventService = eventService;
         }
 
+        public void SubscribeToEvent(EventDTO eventDTO, AppUserDTO subscribingUser)
+        {
+            eventService.SubscribeToEvent(eventDTO, subscribingUser);
+        }
+
+
+
+
+
 
         public int Create(EventDTO entityDto)
         {
