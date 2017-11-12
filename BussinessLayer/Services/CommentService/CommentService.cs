@@ -41,25 +41,7 @@ namespace BussinessLayer.Services.CommentService
             Repository.Update(repComment);
             _statusRepository.Update(repStatus);
         }
-
-        /*
-        /// <summary>
-        /// Gets customer with given email address
-        /// </summary>
-        /// <param name="email">email</param>
-        /// <returns>Customer with given email address</returns>
-        public async Task<AppUserDTO> GetCustomerAccordingToEmailAsync(string email)
-        {
-            var users = await Repository.GetAll();
-            return  Mapper.Map<AppUser, AppUserDTO>(users.SingleOrDefault(a => a.Email == email));
-        }
-
-
-        public void createFriendship(AppUserDTO user1, AppUserDTO user2)
-        {
-            throw new NotImplementedException();
-        }
-        */
+ 
 
 
     }

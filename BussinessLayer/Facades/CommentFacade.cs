@@ -25,6 +25,14 @@ namespace BussinessLayer.Facades
         }
 
 
+        public void AddComment(StatusDTO status, CommentDTO comment, AppUserDTO user)
+        {
+            commentService.AddComment(status, comment, user);
+        }
+
+
+
+
         public int Create(CommentDTO entityDto)
         {
             int returnValue;

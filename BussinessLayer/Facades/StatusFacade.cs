@@ -24,6 +24,20 @@ namespace BussinessLayer.Facades
             this.statusService = statusService;
         }
 
+
+        public void PostStatusToGroup(StatusDTO statusDTO, GroupDTO groupDTO)
+        {
+            statusService.PostStatusToGroup(statusDTO, groupDTO);
+        }
+
+        public void PostStatusToEvent(StatusDTO statusDTO, EventDTO eventDTO)
+        {
+            statusService.PostStatusToEvent(statusDTO, eventDTO);
+        }
+
+
+
+
         public int Create(StatusDTO status)
         {
             int returnValue;
@@ -61,15 +75,6 @@ namespace BussinessLayer.Facades
             return statusService.ListAllAsync().Result.Items;
         }
 
-        public void PostStatusToGroup(StatusDTO status, GroupDTO group)
-        {
-            statusService.PostStatusToGroup(status, group);
-        }
-
-        public void PostStatusToEvent(StatusDTO status, EventDTO event_)
-        {
-            statusService.PostStatusToEvent(status, event_);
-        }
 
 
 
