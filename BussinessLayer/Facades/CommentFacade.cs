@@ -24,6 +24,41 @@ namespace BussinessLayer.Facades
             this.commentService = commentService;
         }
 
- 
+
+        public int Create(CommentDTO entityDto)
+        {
+            int returnValue;
+            using (UnitOfWorkProvider.Create())
+            {
+                returnValue = commentService.Create(entityDto);
+            }
+            return returnValue;
+        }
+
+        public void Update(CommentDTO entityDto)
+        {
+            using (UnitOfWorkProvider.Create())
+            {
+                commentService.Update(entityDto);
+            }
+        }
+
+        public void Delete(CommentDTO entityDto)
+        {
+            using (UnitOfWorkProvider.Create())
+            {
+                commentService.Delete(entityDto.Id);
+            }
+        }
+
+        public async Task<CommentDTO> GetByIdAsync(int entityId)
+        {
+            return await commentService.GetAsync(entityId);
+        }
+
+        public IEnumerable<CommentDTO> ListAll()
+        {
+            return commentService.ListAllAsync().Result.Items;
+        }
     }
 }

@@ -25,6 +25,41 @@ namespace BussinessLayer.Facades
             this.groupService = groupService;
         }
 
- 
+
+        public int Create(GroupDTO entityDto)
+        {
+            int returnValue;
+            using (UnitOfWorkProvider.Create())
+            {
+                returnValue = groupService.Create(entityDto);
+            }
+            return returnValue;
+        }
+
+        public void Update(GroupDTO entityDto)
+        {
+            using (UnitOfWorkProvider.Create())
+            {
+                groupService.Update(entityDto);
+            }
+        }
+
+        public void Delete(GroupDTO entityDto)
+        {
+            using (UnitOfWorkProvider.Create())
+            {
+                groupService.Delete(entityDto.Id);
+            }
+        }
+
+        public async Task<GroupDTO> GetByIdAsync(int entityId)
+        {
+            return await groupService.GetAsync(entityId);
+        }
+
+        public IEnumerable<GroupDTO> ListAll()
+        {
+            return groupService.ListAllAsync().Result.Items;
+        }
     }
 }
