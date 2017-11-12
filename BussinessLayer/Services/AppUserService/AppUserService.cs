@@ -33,7 +33,7 @@ namespace BussinessLayer.Services.AppUserService
         }
 
 
-        public void createFriendship(AppUserDTO user1, AppUserDTO user2)
+        public void CreateFriendship(AppUserDTO user1, AppUserDTO user2)
         {
             throw new NotImplementedException();
         }

@@ -13,7 +13,7 @@ namespace BussinessLayer.Services.GroupService
     {
 
 
-
+        void SendMessage(AppUserDTO from, AppUserDTO to, MessageDTO message);
 
         // TODO - THIS COULD BE DELETED LATER 
         // after succesfull implement. of ICRUDBase generic interface

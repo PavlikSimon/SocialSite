@@ -14,11 +14,14 @@ namespace BussinessLayer.Services.AppUserService
     public interface IAppUserService //: ICRUDBase<TEntity, TDto, TFilterDto>
 
     {
-        void createFriendship(AppUserDTO user1, AppUserDTO user2);
+        void CreateFriendship(AppUserDTO user1, AppUserDTO user2);
+
+        void RemoveFriendship(AppUserDTO user1, AppUserDTO user2);
 
         Task<AppUserDTO> GetAppUserAccordingToEmailAsync(string email);
 
 
+        
 
         // TODO - THIS COULD BE DELETED LATER 
         // after succesfull implement. of ICRUDBase generic interface

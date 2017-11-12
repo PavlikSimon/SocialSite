@@ -12,7 +12,7 @@ namespace BussinessLayer.Services.EventService
     public interface IEventService
     {
 
-
+        void SubscribeToEvent(EventDTO event_ /*collision with event keyword*/, AppUserDTO subscribingUser);
 
         // TODO - THIS COULD BE DELETED LATER 
         // after succesfull implement. of ICRUDBase generic interface

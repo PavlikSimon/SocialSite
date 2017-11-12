@@ -13,9 +13,9 @@ using DAL.IdentityEntities;
 
 namespace BussinessLayer.Services.CommentService
 {
-    public class MessageService : CRUDBase<Comment, CommentDTO, CommentFilterDto>, ICommentService
+    public class CommentService : CRUDBase<Comment, CommentDTO, CommentFilterDto>, ICommentService
     {
-        public MessageService(IMapper mapper, IRepository<Comment, int> commentRepository, CommentQueryObject commentQueryObject)
+        public CommentService(IMapper mapper, IRepository<Comment, int> commentRepository, CommentQueryObject commentQueryObject)
             : base(mapper, commentRepository, commentQueryObject) { }
 
         protected override async Task<Comment> GetWithIncludesAsync(int entityId)

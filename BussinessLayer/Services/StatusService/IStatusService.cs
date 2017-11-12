@@ -14,8 +14,10 @@ namespace BussinessLayer.Services.StatusService
 
         //Task<IEnumerable<AppUserDTO>> ListUsersStatusesAsync(AppUserFilterDto filter);
 
-        
 
+        void PostStatusToGroup(StatusDTO status, GroupDTO group);
+
+        void PostStatusToEvent(StatusDTO status, EventDTO event_);
 
 
         // TODO - THIS COULD BE DELETED LATER 

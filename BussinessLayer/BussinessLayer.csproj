@@ -86,8 +86,8 @@
     <Compile Include="Services\StatusService\StatusService.cs" />
     <Compile Include="Services\EventService\IEventService.cs" />
     <Compile Include="Services\EventService\EventService.cs" />
-    <Compile Include="Services\CommentService\IMessageService.cs" />
-    <Compile Include="Services\CommentService\MessageService.cs" />
+    <Compile Include="Services\CommentService\ICommentService.cs" />
+    <Compile Include="Services\CommentService\CommentService.cs" />
     <Compile Include="Services\MessageService\MessageService.cs" />
     <Compile Include="Services\MessageService\IMessageService.cs" />
     <Compile Include="Services\GroupService\GroupService.cs" />

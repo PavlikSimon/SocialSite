@@ -12,9 +12,18 @@ namespace BussinessLayer.Services.GroupService
     public interface IGroupService
     {
 
+        void EnterGroup(AppUserDTO user, GroupDTO group);
+
+        /// <summary>
+        /// Method for admins for adding people to private groups
+        /// </summary>
+        /// <param name="user"></param>
+        /// <param name="group"></param>
+        void AddUserToGroup(AppUserDTO user, GroupDTO group);
 
 
         // TODO - THIS COULD BE DELETED LATER 
+
         // after succesfull implement. of ICRUDBase generic interface
 
         /// <summary>
