@@ -24,6 +24,15 @@ namespace BussinessLayer.Facades
             this.appUserService = appUserService;
         }
 
+        public void CreateFriendship(AppUserDTO user1, AppUserDTO user2)
+        {
+            appUserService.CreateFriendship(user1, user2);
+        }
+
+        public void RemoveFriendship(AppUserDTO user1, AppUserDTO user2)
+        {
+            appUserService.RemoveFriendship(user1, user2);
+        }
         
         /// <summary>
         /// Gets customer according to email
@@ -50,15 +59,5 @@ namespace BussinessLayer.Facades
                 return await appUserService.ListAllAsync();
             }
         }
-
-        /*
-        public async Task<IEnumerable<StatusDTO>> ListAppUserStatusesAsync(StatusFilterDto filter)
-        {
-            using (UnitOfWorkProvider.Create())
-            {
-                return await statusService.ListUsersStatusesAsync(filter);
-            }
-        }
-        */
     }
 }
