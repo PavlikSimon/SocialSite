@@ -25,6 +25,41 @@ namespace BussinessLayer.Facades
             this.eventService = eventService;
         }
 
- 
+
+        public int Create(EventDTO entityDto)
+        {
+            int returnValue;
+            using (UnitOfWorkProvider.Create())
+            {
+                returnValue = eventService.Create(entityDto);
+            }
+            return returnValue;
+        }
+
+        public void Update(EventDTO entityDto)
+        {
+            using (UnitOfWorkProvider.Create())
+            {
+                eventService.Update(entityDto);
+            }
+        }
+
+        public void Delete(EventDTO entityDto)
+        {
+            using (UnitOfWorkProvider.Create())
+            {
+                eventService.Delete(entityDto.Id);
+            }
+        }
+
+        public async Task<EventDTO> GetByIdAsync(int entityId)
+        {
+            return await eventService.GetAsync(entityId);
+        }
+
+        public IEnumerable<EventDTO> ListAll()
+        {
+            return eventService.ListAllAsync().Result.Items;
+        }
     }
 }

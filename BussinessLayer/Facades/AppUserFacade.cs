@@ -61,5 +61,44 @@ namespace BussinessLayer.Facades
                 return await appUserService.ListAllAsync();
             }
         }
+
+
+
+        public int Create(AppUserDTO entityDto)
+        {
+            int returnValue;
+            using (UnitOfWorkProvider.Create())
+            {
+                returnValue = appUserService.Create(entityDto);
+            }
+            return returnValue;
+        }
+
+        public void Update(AppUserDTO entityDto)
+        {
+            using (UnitOfWorkProvider.Create())
+            {
+                appUserService.Update(entityDto);
+            }
+        }
+
+        public void Delete(AppUserDTO entityDto)
+        {
+            using (UnitOfWorkProvider.Create())
+            {
+                appUserService.Delete(entityDto.Id);
+            }
+        }
+
+        public async Task<AppUserDTO> GetByIdAsync(int entityId)
+        {
+            return await appUserService.GetAsync(entityId);
+        }
+
+        public IEnumerable<AppUserDTO> ListAll()
+        {
+            return appUserService.ListAllAsync().Result.Items;
+        }
+
     }
 }
