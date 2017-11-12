@@ -65,6 +65,11 @@
     <Compile Include="DTO\NewAppUserDto.cs" />
     <Compile Include="DTO\StatusDTO.cs" />
     <Compile Include="DTO\Enumerations\Gender.cs" />
+    <Compile Include="Facades\GroupFacade.cs" />
+    <Compile Include="Facades\MessageFacade.cs" />
+    <Compile Include="Facades\EventFacade.cs" />
+    <Compile Include="Facades\CommentFacade.cs" />
+    <Compile Include="Facades\StatusFacade.cs" />
     <Compile Include="Facades\Common\FacadeBase.cs" />
     <Compile Include="Filters\AppUserFilterDto.cs" />
     <Compile Include="Filters\CommentFilterDto.cs" />

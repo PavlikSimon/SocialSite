@@ -41,9 +41,11 @@ namespace BussinessLayer.Facades
         /// <returns>Customer with specified email</returns>
         public async Task<AppUserDTO> GetCustomerAccordingToEmailAsync(string email)
         {
-            using (UnitOfWorkProvider.Create())
+            using (var uow = UnitOfWorkProvider.Create())
             {
+                //uow.Commit();
                 return await appUserService.GetAppUserAccordingToEmailAsync(email);
+                //uow.RegisterAfterCommitAction(confirmationAction);
             }
         }
         
