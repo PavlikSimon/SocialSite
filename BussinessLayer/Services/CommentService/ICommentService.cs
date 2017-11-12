@@ -12,7 +12,7 @@ namespace BussinessLayer.Services.CommentService
     public interface ICommentService
     {
 
-        void addComment(StatusDTO status, CommentDTO comment);
+        void AddComment(StatusDTO status, CommentDTO comment, AppUserDTO user);
  
         // TODO - THIS COULD BE DELETED LATER 
         // after succesfull implement. of ICRUDBase generic interface

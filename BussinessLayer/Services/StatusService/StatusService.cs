@@ -22,11 +22,42 @@ namespace BussinessLayer.Services.StatusService
     {
         private readonly QueryObjectBase<AppUserDTO, AppUser, AppUserFilterDto, QueryInfrastracture.IQuery<AppUser>> appUserQueryObject;
 
+        private readonly IRepository<Group, int> _groupRepository;
+
+        private readonly IRepository<Event, int> _eventRepository;
+
+        public void PostStatusToGroup(StatusDTO status, GroupDTO group)
+        {
+            Create(status);
+            Status repStatus = Mapper.Map<Status>(status);
+            Group repGroup = Mapper.Map<Group>(group);
+            repStatus.Group = repGroup;
+            repGroup.Statuses.Add(repStatus);
+            _groupRepository.Update(repGroup);
+            Repository.Update(repStatus);
+
+        }
+
+        public void PostStatusToEvent(StatusDTO status, EventDTO event_)
+        {
+            Create(status);
+            Status repStatus = Mapper.Map<Status>(status);
+            Event repEvent = Mapper.Map<Event>(event_);
+            repStatus.Event = repEvent;
+            repEvent.Statuses.Add(repStatus);
+            _eventRepository.Update(repEvent);
+            Repository.Update(repStatus);
+        }
 
 
-
-        public StatusService(IMapper mapper, IRepository<Status, int> statusRepository, StatusQueryObject statusQueryObject)
-            : base(mapper, statusRepository, statusQueryObject) { }
+        public StatusService(IMapper mapper, IRepository<Status, int> statusRepository,
+            StatusQueryObject statusQueryObject, IRepository<Group, int> groupRepository,
+            IRepository<Event, int> eventRepository)
+            : base(mapper, statusRepository, statusQueryObject)
+        {
+            _groupRepository = groupRepository;
+            _eventRepository = eventRepository;
+        }
 
         protected override async Task<Status> GetWithIncludesAsync(int entityId)
         {

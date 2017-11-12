@@ -18,7 +18,9 @@ namespace BussinessLayer.Services.AppUserService
 
         protected override async Task<AppUser> GetWithIncludesAsync(int entityId)
         {
+            
             return await Repository.GetByIdAsync(entityId);
+            
         }
 
         /// <summary>
@@ -28,14 +30,31 @@ namespace BussinessLayer.Services.AppUserService
         /// <returns>Customer with given email address</returns>
         public async Task<AppUserDTO> GetAppUserAccordingToEmailAsync(string email)
         {
-            var users = await Repository.GetAll();
-            return  Mapper.Map<AppUser, AppUserDTO>(users.SingleOrDefault(a => a.Email == email));
+            AppUserFilterDto filter = new AppUserFilterDto {Email = email};
+            var result = await Query.ExecuteQuery(filter);
+            return result.Items.SingleOrDefault();
+            
         }
 
 
         public void CreateFriendship(AppUserDTO user1, AppUserDTO user2)
         {
-            throw new NotImplementedException();
+            AppUser repUser1 = Mapper.Map<AppUserDTO, AppUser>(user1);
+            AppUser repUser2 = Mapper.Map<AppUserDTO, AppUser>(user2);
+            repUser1.Friends.Add(repUser2);
+            repUser2.Friends.Add(repUser1);
+            Repository.Update(repUser2);
+            Repository.Update(repUser1);
+        }
+
+        public void RemoveFriendship(AppUserDTO user1, AppUserDTO user2)
+        {
+            AppUser repUser1 = Mapper.Map<AppUserDTO, AppUser>(user1);
+            AppUser repUser2 = Mapper.Map<AppUserDTO, AppUser>(user2);
+            repUser2.Friends.Remove(repUser1);
+            repUser1.Friends.Remove(repUser2);
+            Repository.Update(repUser2);
+            Repository.Update(repUser1);
         }
     }
 }

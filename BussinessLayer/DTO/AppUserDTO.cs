@@ -17,6 +17,7 @@ namespace BussinessLayer.DTO
 
         //[MaxLength(50)]
         public string Name { get; set; }
+
         //[MaxLength(50)]
         public string Surname { get; set; }
 
@@ -24,11 +25,10 @@ namespace BussinessLayer.DTO
         public Boolean Hidden { get; set; }
 
 
-        public   ICollection<AppUserDTO> Friends { get; set; }
-        public   ICollection<EventDTO> EventsCreated { get; set; }
-        public   ICollection<EventDTO> EventsAttended { get; set; }
-
-
+        public ICollection<AppUserDTO> Friends { get; set; }
+        public ICollection<EventDTO> EventsCreated { get; set; }
+        public ICollection<EventDTO> EventsAttended { get; set; }
+        public ICollection<GroupDTO> Groups { get; set; }
         public   ICollection<StatusDTO> Statuses { get; set; }
         public   ICollection<CommentDTO> Comments { get; set; }
         public   ICollection<MessageDTO> SentMessages { get; set; }

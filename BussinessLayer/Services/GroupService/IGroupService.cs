@@ -11,8 +11,13 @@ namespace BussinessLayer.Services.GroupService
 {
     public interface IGroupService
     {
-
-        void EnterGroup(AppUserDTO user, GroupDTO group);
+        /// <summary>
+        /// Adds user to group (called by "user himself", so it has to be checked if the group is not private)
+        /// </summary>
+        /// <param name="user"></param>
+        /// <param name="group"></param>
+        /// <returns>true if user was added, false otherwise (group was private)</returns>
+        bool EnterGroup(AppUserDTO user, GroupDTO group);
 
         /// <summary>
         /// Method for admins for adding people to private groups

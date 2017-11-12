@@ -63,7 +63,8 @@ namespace DAL.IdentityEntities
         public virtual ICollection<Event> EventsCreated { get; set; }
         public virtual ICollection<Event> EventsAttended { get; set; }
 
-        
+        public virtual ICollection<Group> Groups { get; set; }
+
         public virtual ICollection<Status> Statuses { get; set; }
         public virtual ICollection<Comment> Comments { get; set; }
         public virtual ICollection<Message> SentMessages { get; set; }

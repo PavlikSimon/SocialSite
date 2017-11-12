@@ -15,12 +15,43 @@ namespace BussinessLayer.Services.GroupService
 {
     public class GroupService : CRUDBase<Group, GroupDTO, GroupFilterDto>, IGroupService
     {
-        public GroupService(IMapper mapper, IRepository<Group, int> groupRepository, GroupQueryObject groupQueryObject)
-            : base(mapper, groupRepository, groupQueryObject) { }
+        public GroupService(IMapper mapper, IRepository<Group, int> groupRepository, GroupQueryObject groupQueryObject, IRepository<AppUser, int> userRepository)
+            : base(mapper, groupRepository, groupQueryObject)
+        {
+            _userRepository = userRepository;
+        }
 
+        private readonly IRepository<AppUser, int> _userRepository;
         protected override async Task<Group> GetWithIncludesAsync(int entityId)
         {
             return await Repository.GetByIdAsync(entityId);
+        }
+
+
+        public bool EnterGroup(AppUserDTO user, GroupDTO group)
+        {
+            if (group.Private)
+            {
+                return false;
+            }
+            AppUser repUser = Mapper.Map<AppUser>(user);
+            Group repGroup = Mapper.Map<Group>(group);
+            repUser.Groups.Add(repGroup);
+            repGroup.Members.Add(repUser);
+            _userRepository.Update(repUser);
+            Repository.Update(repGroup);
+            return true;
+        }
+
+        public void AddUserToGroup(AppUserDTO user, GroupDTO group)
+        {
+            AppUser repUser = Mapper.Map<AppUser>(user);
+            Group repGroup = Mapper.Map<Group>(group);
+            repUser.Groups.Add(repGroup);
+            repGroup.Members.Add(repUser);
+            _userRepository.Update(repUser);
+            Repository.Update(repGroup);
+
         }
 
         /*
