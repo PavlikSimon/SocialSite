@@ -63,5 +63,13 @@ namespace BussinessLayer.Facades
             return messageService.ListAllAsync().Result.Items;
         }
 
+        public void SendMessage(MessageDTO message)
+        {
+            using (UnitOfWorkProvider.Create())
+            {
+                messageService.SendMessage(message.Sender, message.Receiver, message);
+            }
+        }
+
     }
 }
