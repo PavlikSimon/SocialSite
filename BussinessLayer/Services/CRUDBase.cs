@@ -82,7 +82,7 @@ namespace BussinessLayer.Services
         /// Deletes entity with given Id
         /// </summary>
         /// <param name="entityId">Id of the entity to delete</param>
-        public virtual void DeleteProduct(int entityId)
+        public virtual void Delete(int entityId)
         {
             Repository.Delete(entityId);
         }

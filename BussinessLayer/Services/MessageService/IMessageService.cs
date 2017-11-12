@@ -42,7 +42,7 @@ namespace BussinessLayer.Services.GroupService
         /// Deletes entity with given Id
         /// </summary>
         /// <param name="entityId">Id of the entity to delete</param>
-        void DeleteProduct(int entityId);
+        void Delete(int entityId);
 
         /// <summary>
         /// Gets all DTOs (for given type)
