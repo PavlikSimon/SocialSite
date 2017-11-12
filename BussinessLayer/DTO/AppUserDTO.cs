@@ -19,6 +19,9 @@ namespace BussinessLayer.DTO
         //[MaxLength(20)]
         public string Email { get; set; }
 
+
+        public int AccessFailedCount { get; set; }
+
         //[MaxLength(50)]
         public string Name { get; set; }
 
