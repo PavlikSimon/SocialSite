@@ -47,6 +47,7 @@ namespace BussinessLayer.Services.StatusService
             repEvent.Statuses.Add(repStatus);
             _eventRepository.Update(repEvent);
             Repository.Update(repStatus);
+            
         }
 
 
