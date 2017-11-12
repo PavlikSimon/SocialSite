@@ -15,6 +15,10 @@ namespace BussinessLayer.DTO
         //[MaxLength(20)]
         public string UserName { get; set; }
 
+        //[Required]
+        //[MaxLength(20)]
+        public string Email { get; set; }
+
         //[MaxLength(50)]
         public string Name { get; set; }
 
