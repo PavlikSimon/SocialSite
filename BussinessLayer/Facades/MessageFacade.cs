@@ -65,7 +65,10 @@ namespace BussinessLayer.Facades
 
         public void SendMessage(MessageDTO message)
         {
-            messageService.SendMessage(message.Sender, message.Receiver, message);
+            using (UnitOfWorkProvider.Create())
+            {
+                messageService.SendMessage(message.Sender, message.Receiver, message);
+            }
         }
 
     }

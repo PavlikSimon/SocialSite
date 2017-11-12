@@ -25,6 +25,23 @@ namespace BussinessLayer.Facades
             this.groupService = groupService;
         }
 
+        public void EnterGroup(AppUserDTO user, GroupDTO group)
+        {
+            using (UnitOfWorkProvider.Create())
+            {
+                groupService.EnterGroup(user, group);
+            }
+            
+        }
+
+        public void AddUserToGroup(AppUserDTO user, GroupDTO group)
+        {
+            using (UnitOfWorkProvider.Create())
+            {
+                groupService.AddUserToGroup(user, group);
+            }
+
+        }
 
         public int Create(GroupDTO entityDto)
         {
