@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BussinessLayer.DataTransferObjects.Common;
-using DAL.Enumerations;
+using BussinessLayer.DTO.Enumerations;
 
 namespace BussinessLayer.DTO
 {
