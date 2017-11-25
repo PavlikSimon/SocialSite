@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BussinesLayerTests
 {
+    /*
     [TestClass]
     public class Tests
     {
@@ -11,4 +12,5 @@ namespace BussinesLayerTests
         {
         }
     }
+    */
 }
