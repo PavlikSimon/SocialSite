@@ -29,5 +29,7 @@ namespace SocialSite.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<BussinessLayer.DTO.AppUserDTO> AppUserDTOes { get; set; }
     }
 }
