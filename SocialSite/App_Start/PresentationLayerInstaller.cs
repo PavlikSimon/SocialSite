@@ -2,6 +2,7 @@
 using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
+using Microsoft.AspNet.Identity.Owin;
 
 namespace SocialSite
 {
@@ -9,7 +10,12 @@ namespace SocialSite
     {
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
-            container.Register(
+            /*container.Register(
+                Component.For<SignInManager<,>>()
+                    .ImplementedBy<SignInManager>()
+                    .LifestyleTransient(),
+                    */
+                container.Register(
                 Classes.FromThisAssembly()
                     .BasedOn<IController>()
                     .LifestyleTransient()
