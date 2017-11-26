@@ -20,7 +20,7 @@ namespace BussinessLayer.Services.StatusService
 {
     public class StatusService : CRUDBase<Status, StatusDTO, StatusFilterDto>, IStatusService
     {
-        private readonly QueryObjectBase<AppUserDTO, AppUser, AppUserFilterDto, QueryInfrastracture.IQuery<AppUser>> appUserQueryObject;
+        //private readonly QueryObjectBase<AppUserDTO, AppUser, AppUserFilterDto, QueryInfrastracture.IQuery<AppUser>> appUserQueryObject;
 
         private readonly IRepository<Group, int> _groupRepository;
 

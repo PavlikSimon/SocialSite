@@ -9,31 +9,87 @@ using System.Web;
 using System.Web.Mvc;
 using BussinessLayer.DTO;
 using BussinessLayer.Facades;
+using BussinessLayer.Filters;
+using BussinessLayer.Services.AppUserService;
+using BussinessLayer.Services.StatusService;
+using Riganti.Utils.Infrastructure.Core;
 using SocialSite.Models;
 
 namespace SocialSite.Controllers
 {
     public class AppUserController : Controller
     {
-        
-        //public AppUserFacade appUserFacade { get; set; }
-        private ApplicationDbContext db = new ApplicationDbContext();
+        //private static readonly IAppUserService appUserService;
+        //private static IUnitOfWorkProvider unitOfWorkProvider;
 
+        //private AppUserFacade appUserFacade = new AppUserFacade(unitOfWorkProvider, appUserService);
+
+        //private ApplicationDbContext db = new ApplicationDbContext();
+
+        private readonly string filterSessionKey = "filter";
+
+        private readonly string categoryTreesSessionKey = "categoryTrees";
+
+        public AppUserFacade AppUserFacade { get; set; }
         // GET: AppUser
-        /*public async Task<ActionResult> Index()
+       public async Task<ActionResult> Index()
         {
-            var result = await appUserFacade.GetAllAppUsersAsync();
-            return View(result);
+            var result = await AppUserFacade.GetAllAppUsersAsync();
+            return View(result.Items);
+        }
+
+/*
+        public ActionResult Index(int page = 1)
+        {
+            var filter = Session[filterSessionKey] as AppUserFilterDto ?? new AppUserFilterDto();
+            var categoryTrees = Session[categoryTreesSessionKey] as IList<AppUserDTO>;
+
+            var result = AppUserFacade.GetAllAppUsersAsync();
+
+            var model = InitializeProductListViewModel(result, categoryTrees);
+
+            return View("ProductListView", model);
         }*/
 
-        // GET: AppUser
+        /// <summary>
+      /*  /// Initializes new ProductListViewModel according to its parameters
+        /// </summary>
+        /// <param name="result">Product list query result containing products page and related data</param>
+        /// <param name="categories">List of category trees</param>
+        /// <returns>Initialized instance of ProductListViewModel</returns>
+        private AppUserViewModel InitializeProductListViewModel(ProductListQueryResultDTO result, IList<AppUserDTO> users = null)
+        {
+            return new AppUserViewModel
+            {
+                Products = AppUserFacade.GetAllAppUsersAsync();
+        };
+        }*/
+
+
+        // GET: AppUser/Details/5
+        public async Task<ActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            var result = await AppUserFacade.GetByIdAsync(id.Value);
+
+            if (result == null)
+            {
+                return HttpNotFound();
+            }
+            return View(result);
+        }
+
+        /* // GET: AppUser
         public ActionResult Index()
         {
             return View(db.AppUserDTOes.ToList());
-        }
+        }*/
 
         // GET: AppUser/Details/5
-        public ActionResult Details(int? id)
+        /*public ActionResult Details(int? id)
         {
             if (id == null)
             {
@@ -45,34 +101,14 @@ namespace SocialSite.Controllers
                 return HttpNotFound();
             }
             return View(appUserDTO);
-        }
-
-        /*
-        // GET: AppUser/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            var result = await appUserFacade.GetByIdAsync(id.Value);
-            // db.AppUserDTOes.Find(id);
-
-            if (model == null)
-            {
-                return HttpNotFound();
-            }
-            return View(model);
         }*/
-
-
 
         // GET: AppUser/Create
         public ActionResult Create()
         {
             return View();
         }
-
+        /*
         // POST: AppUser/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
@@ -155,5 +191,9 @@ namespace SocialSite.Controllers
             }
             base.Dispose(disposing);
         }
+
+    */
+
+
     }
 }

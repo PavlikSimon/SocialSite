@@ -1,5 +1,6 @@
 ﻿namespace DAL.Infrastructure
 {
+    /*
     public class EntityFrameworkUnitOfWorkProvider : IUnitOfWorkProvider
     {
         //ToDo change to some parralel friendly variable
@@ -16,4 +17,5 @@
             return localUowInstance;
         }
     }
+    */
 }

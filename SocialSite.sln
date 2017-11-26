@@ -9,12 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Riganti.Utils.Infrastructure.EntityFramework", "Infrastructure\Riganti.Utils.Infrastructure.EntityFramework\Riganti.Utils.Infrastructure.EntityFramework.csproj", "{F00EFB05-01D0-43FA-9ECC-08A8F1C2812B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Riganti.Utils.Infrastructure.Logging", "Infrastructure\Riganti.Utils.Infrastructure.Logging\Riganti.Utils.Infrastructure.Logging.csproj", "{38EE3DD3-45DC-4D4B-AA71-664C613189FF}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Riganti.Utils.Infrastructure.Logging.ApplicationInsights", "Infrastructure\Riganti.Utils.Infrastructure.Logging.ApplicationInsights\Riganti.Utils.Infrastructure.Logging.ApplicationInsights.csproj", "{E5464B90-3F29-4086-9142-F5771E658579}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Riganti.Utils.Infrastructure.Logging.Email", "Infrastructure\Riganti.Utils.Infrastructure.Logging.Email\Riganti.Utils.Infrastructure.Logging.Email.csproj", "{4ED97B15-1EFA-4D2E-A90D-E4A5F70B46A7}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Riganti.Utils.Infrastructure.Services", "Infrastructure\Riganti.Utils.Infrastructure.Services\Riganti.Utils.Infrastructure.Services.csproj", "{049128C8-F21F-489C-8FE4-7324BE92B056}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Riganti.Utils.Infrastructure.Services.Mailing", "Infrastructure\Riganti.Utils.Infrastructure.Services.Mailing\Riganti.Utils.Infrastructure.Services.Mailing.csproj", "{603D181D-2333-493B-895E-77DAC9C28FD7}"
@@ -53,18 +47,6 @@ Global
 		{F00EFB05-01D0-43FA-9ECC-08A8F1C2812B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F00EFB05-01D0-43FA-9ECC-08A8F1C2812B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F00EFB05-01D0-43FA-9ECC-08A8F1C2812B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{38EE3DD3-45DC-4D4B-AA71-664C613189FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{38EE3DD3-45DC-4D4B-AA71-664C613189FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{38EE3DD3-45DC-4D4B-AA71-664C613189FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{38EE3DD3-45DC-4D4B-AA71-664C613189FF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E5464B90-3F29-4086-9142-F5771E658579}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E5464B90-3F29-4086-9142-F5771E658579}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E5464B90-3F29-4086-9142-F5771E658579}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E5464B90-3F29-4086-9142-F5771E658579}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4ED97B15-1EFA-4D2E-A90D-E4A5F70B46A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4ED97B15-1EFA-4D2E-A90D-E4A5F70B46A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4ED97B15-1EFA-4D2E-A90D-E4A5F70B46A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4ED97B15-1EFA-4D2E-A90D-E4A5F70B46A7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{049128C8-F21F-489C-8FE4-7324BE92B056}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{049128C8-F21F-489C-8FE4-7324BE92B056}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{049128C8-F21F-489C-8FE4-7324BE92B056}.Release|Any CPU.ActiveCfg = Release|Any CPU

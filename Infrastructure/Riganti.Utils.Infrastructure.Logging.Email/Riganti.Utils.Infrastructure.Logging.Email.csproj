@@ -34,7 +34,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Riganti.Utils.Infrastructure.Core\Riganti.Utils.Infrastructure.Core.csproj" />
-    <ProjectReference Include="..\Riganti.Utils.Infrastructure.Logging\Riganti.Utils.Infrastructure.Logging.csproj" />
     <ProjectReference Include="..\Riganti.Utils.Infrastructure.Services.Mailing\Riganti.Utils.Infrastructure.Services.Mailing.csproj" />
   </ItemGroup>
 

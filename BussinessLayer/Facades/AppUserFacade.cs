@@ -17,7 +17,7 @@ namespace BussinessLayer.Facades
     public class AppUserFacade : FacadeBase
     {
         private readonly IAppUserService appUserService;
-        private readonly IStatusService statusService;
+        //private readonly IStatusService statusService;
 
         public AppUserFacade(IUnitOfWorkProvider unitOfWorkProvider, IAppUserService appUserService) : base(unitOfWorkProvider)
         {

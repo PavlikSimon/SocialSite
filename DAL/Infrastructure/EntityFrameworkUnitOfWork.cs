@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Infrastructure
 {
-    public class EntityFrameworkUnitOfWork : IUnitOfWork
+    /*public class EntityFrameworkUnitOfWork : IUnitOfWork
     {
 
         public DatabaseContext Context { get; }
@@ -27,9 +27,15 @@ namespace DAL.Infrastructure
             Context.Dispose();
         }
 
+        protected async Task CommitCore()
+        {
+            await Context.SaveChangesAsync();
+        }
+
         public void Commit()
         {
             Context.SaveChanges();
         }
     }
+    */
 }
