@@ -17,10 +17,10 @@ namespace BussinessLayer.Facades
 {
     public class AppUserFacade : FacadeBase
     {
-        private readonly AppUserService appUserService;
+        private readonly IAppUserService appUserService;
         //private readonly IStatusService statusService;
 
-        public AppUserFacade(IUnitOfWorkProvider unitOfWorkProvider, AppUserService appUserService) : base(unitOfWorkProvider)
+        public AppUserFacade(IUnitOfWorkProvider unitOfWorkProvider, IAppUserService appUserService) : base(unitOfWorkProvider)
         {
             this.appUserService = appUserService;
         }
