@@ -14,6 +14,25 @@ using QueryInfrastracture;
 
 namespace BussinessLayer
 {
+    /*public static class Mapping
+    {
+        public static IMapper Mapper { get; }
+        static Mapping()
+        {
+            var config = new MapperConfiguration(c =>
+            {
+
+                c.CreateMap<Comment, CommentDTO>().ReverseMap();
+                c.CreateMap<Event, EventDTO>().ReverseMap();
+                c.CreateMap<Group, GroupDTO>().ReverseMap();
+                c.CreateMap<Message, MessageDTO>().ReverseMap();
+                c.CreateMap<AppUser, AppUserDTO>().ReverseMap();
+            });
+            Mapper = config.CreateMapper();
+        }
+    }*/
+
+    
     public class MappingConfig
     {
         //public static IMapper Mapper { get; }
@@ -40,5 +59,9 @@ namespace BussinessLayer
             //});
             //Mapper = config.CreateMapper();
         }
-    }
+    } 
+     
+
 }
+
+

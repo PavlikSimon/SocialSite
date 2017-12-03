@@ -6,6 +6,13 @@ namespace Riganti.Utils.Infrastructure.Services.Facades
     {
 
         public IUnitOfWorkProvider UnitOfWorkProvider { get; set; }
-
+        protected FacadeBase()
+        {
+            
+        }
+        protected FacadeBase(IUnitOfWorkProvider unitOfWorkProvider)
+        {
+            UnitOfWorkProvider = unitOfWorkProvider;
+        }
     }
 }

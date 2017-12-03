@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace DAL.Infrastructure
 {
-    /*public class EntityFrameworkUnitOfWork : IUnitOfWork
+    /*
+    public class EntityFrameworkUnitOfWork : IUnitOfWork
     {
-
+        
         public DatabaseContext Context { get; }
 
         public DatabaseContext GetContext()
@@ -35,6 +36,11 @@ namespace DAL.Infrastructure
         public void Commit()
         {
             Context.SaveChanges();
+        }
+
+        public void RegisterAction(Action action)
+        {
+            throw new NotImplementedException();
         }
     }
     */

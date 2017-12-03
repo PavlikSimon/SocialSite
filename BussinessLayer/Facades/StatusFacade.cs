@@ -10,7 +10,7 @@ using BussinessLayer.QueryObjects.Common;
 using BussinessLayer.Services.AppUserService;
 using BussinessLayer.Services.StatusService;
 using Riganti.Utils.Infrastructure.Core;
-
+using Riganti.Utils.Infrastructure.Services.Facades;
 
 
 namespace BussinessLayer.Facades

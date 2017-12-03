@@ -1,29 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Net;
+﻿using System.Net;
 using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
-using BussinessLayer.DTO;
+using BussinessLayer;
 using BussinessLayer.Facades;
-using BussinessLayer.Filters;
+using BussinessLayer.QueryObjects;
 using BussinessLayer.Services.AppUserService;
-using BussinessLayer.Services.StatusService;
 using Riganti.Utils.Infrastructure.Core;
-using SocialSite.Models;
 
-namespace SocialSite.Controllers
+namespace Web.Controllers
 {
     public class AppUserController : Controller
     {
-        //private static readonly IAppUserService appUserService;
-        //private static IUnitOfWorkProvider unitOfWorkProvider;
+        public AppUserService(IMapper mapper, IRepository<AppUser, int> appUserRepository, AppUserQueryObject appUserQueryObject)
+
+        private IMapper Mapper
+        private static AppUserService appUserService = new AppUserService();
+        //private static IUnitOfWorkProvider unitOfWorkProvider;// = new UnitOfWorkProvider();
 
         //private AppUserFacade appUserFacade = new AppUserFacade(unitOfWorkProvider, appUserService);
-
+        private AppUserFacade appUserFacade { get; set; }
         //private ApplicationDbContext db = new ApplicationDbContext();
 
         private readonly string filterSessionKey = "filter";

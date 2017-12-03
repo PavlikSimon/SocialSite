@@ -25,7 +25,7 @@ namespace SocialSite
 
             BootstrapContainer();
         }
-
+        
         private void BootstrapContainer()
         {
             // configure DI            

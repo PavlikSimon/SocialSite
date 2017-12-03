@@ -30,8 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoMapper, Version=6.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
-      <HintPath>..\packages\AutoMapper.6.1.1\lib\net45\AutoMapper.dll</HintPath>
+    <Reference Include="AutoMapper, Version=6.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.2.1\lib\net45\AutoMapper.dll</HintPath>
     </Reference>
     <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <HintPath>..\packages\Castle.Core.4.2.1\lib\net45\Castle.Core.dll</HintPath>
@@ -56,6 +56,7 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -127,6 +128,10 @@
     <ProjectReference Include="..\Infrastructure\Riganti.Utils.Infrastructure.Core\Riganti.Utils.Infrastructure.Core.csproj">
       <Project>{a0e083f9-3e3e-4624-85cb-a5b0fb5d276d}</Project>
       <Name>Riganti.Utils.Infrastructure.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure\Riganti.Utils.Infrastructure.EntityFramework\Riganti.Utils.Infrastructure.EntityFramework.csproj">
+      <Project>{f00efb05-01d0-43fa-9ecc-08a8f1c2812b}</Project>
+      <Name>Riganti.Utils.Infrastructure.EntityFramework</Name>
     </ProjectReference>
     <ProjectReference Include="..\Infrastructure\Riganti.Utils.Infrastructure.Services\Riganti.Utils.Infrastructure.Services.csproj">
       <Project>{049128c8-f21f-489c-8fe4-7324be92b056}</Project>

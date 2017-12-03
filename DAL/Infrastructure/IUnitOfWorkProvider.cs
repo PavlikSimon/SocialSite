@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Riganti.Utils.Infrastructure.Core;
 
 namespace DAL.Infrastructure
 {
-    /*
+    
     public interface IUnitOfWorkProvider
     {
         IUnitOfWork Create();
@@ -38,5 +39,5 @@ namespace DAL.Infrastructure
             UowLocalInstance.Value = null;
         }
     }
-    */
+    
 }

@@ -7,7 +7,7 @@ using Riganti.Utils.Infrastructure.Core;
 
 
 namespace BussinessLayer.Facades.Common
-{
+{/*
     public abstract class FacadeBase
     {
         protected readonly IUnitOfWorkProvider UnitOfWorkProvider;
@@ -16,5 +16,5 @@ namespace BussinessLayer.Facades.Common
             UnitOfWorkProvider = unitOfWorkProvider;
         }
 
-    }
+    }*/
 }

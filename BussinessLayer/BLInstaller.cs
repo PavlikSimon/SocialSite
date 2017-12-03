@@ -4,6 +4,7 @@ using AutoMapper;
 using BussinessLayer.Facades.Common;
 using BussinessLayer.QueryObjects.Common;
 using BussinessLayer.Services;
+using BussinessLayer.Services.AppUserService;
 using Castle;
 using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.Resolvers.SpecializedResolvers;
@@ -11,6 +12,8 @@ using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
 using DAL;
 using Riganti.Utils.Infrastructure.Core;
+using Riganti.Utils.Infrastructure.Services.Facades;
+using QueryInfrastracture;
 
 namespace BussinessLayer
 {
@@ -22,25 +25,9 @@ namespace BussinessLayer
             new EntityFrameworkInstaller().Install(container, store);
             
             container.Register(
-                /*
-                Component.For<Func<DbContext>>()
-                    .Instance(() => new DatabaseContext())
-                    .LifestyleTransient(),*/
-
-                Component.For<IUnitOfWorkProvider>()
-                    .ImplementedBy<UnitOfWorkProviderBase>()
-                    .LifestyleSingleton(),
-
-                /*
-                Component.For<IUnitOfWorkRegistry>()
-                    .Instance(new HttpContextUnitOfWorkRegistry(new ThreadLocalUnitOfWorkRegistry()))
-                    .LifestyleSingleton(),*/
-
-
-
                 Classes.FromThisAssembly()
                     .BasedOn(typeof(QueryObjectBase<,,,>))
-                    .WithServiceBase()
+                    //.WithServiceBase()
                     .LifestyleTransient(),
 
                 Classes.FromThisAssembly()
@@ -48,24 +35,55 @@ namespace BussinessLayer
                     .WithServiceDefaultInterfaces()
                     .LifestyleTransient(),
 
+                /*Classes.FromThisAssembly()
+                    .BasedOn(typeof(CRUDBase<,,>))
+                    .LifestyleTransient(),*/
+                /*Component.For<AppUserService>()
+                    .LifestyleSingleton(),
+
+                  Classes.FromThisAssembly()
+.BasedOn<AppUserService>()
+.LifestyleTransient(),*/
+/*
+                Component.For<AppUserService>()
+                    .LifestyleSingleton(),
+*/
+
+
                 Classes.FromThisAssembly()
                     .BasedOn<FacadeBase>()
                     .LifestyleTransient(),
 
                 Component.For<IMapper>()
                     .Instance(new Mapper(new MapperConfiguration(MappingConfig.ConfigureMapping)))
-                    .LifestyleSingleton()
-                    /*
+                    .LifestyleSingleton(),
 
-            Component.For(typeof(IRepository<,>))
-                .ImplementedBy(typeof(EntityFrameworkRepository<,>))
-                .LifestyleTransient(),
+                Component.For<IUnitOfWorkRegistry>()
+                    .LifestyleSingleton(),
 
-    */
+                Component.For<IDateTimeProvider>()
+                    .LifestyleSingleton(), 
+
+
+            /*
+            Classes.FromThisAssembly()
+                .BasedOn<IUnitOfWorkRegistry>()
+                .WithServiceDefaultInterfaces()
+                .LifestyleTransient(),*/
+
+            Classes.FromThisAssembly()
+                .BasedOn<IDateTimeProvider>()
+                .LifestyleTransient()
+
+
+            
+
+            , Component.For<IUnitOfWorkProvider>()
+                .ImplementedBy<UnitOfWorkProviderBase>()
+                .LifestyleSingleton()
+                
 
             );
-
-            // add collection subresolver in order to resolve IEnumerable in Price Calculator Resolver
             container.Kernel.Resolver.AddSubResolver(new CollectionResolver(container.Kernel));
         }
     }

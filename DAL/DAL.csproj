@@ -102,6 +102,14 @@
       <Project>{f00efb05-01d0-43fa-9ecc-08a8f1c2812b}</Project>
       <Name>Riganti.Utils.Infrastructure.EntityFramework</Name>
     </ProjectReference>
+    <ProjectReference Include="..\QueryInfrastracture\QueryInfrastracture.csproj">
+      <Project>{1dc614d8-28e7-4465-99f3-a1911dfc9b77}</Project>
+      <Name>QueryInfrastracture</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QueryInfrastructureEntityFramework\QueryInfrastructureEntityFramework.csproj">
+      <Project>{40452359-cc17-4a90-8560-e04d1d7e4193}</Project>
+      <Name>QueryInfrastructureEntityFramework</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

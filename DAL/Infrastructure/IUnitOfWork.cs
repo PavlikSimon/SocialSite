@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Infrastructure
 {
-    /*
+    
     public interface IUnitOfWork : IDisposable
     {
         void Commit();
@@ -16,5 +16,5 @@ namespace DAL.Infrastructure
         /// </summary>
         void RegisterAction(Action action);
     }
-    */
+    
 }

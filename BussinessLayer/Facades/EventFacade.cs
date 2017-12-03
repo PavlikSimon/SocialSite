@@ -12,6 +12,7 @@ using BussinessLayer.Services.CommentService;
 using BussinessLayer.Services.EventService;
 using BussinessLayer.Services.StatusService;
 using Riganti.Utils.Infrastructure.Core;
+using Riganti.Utils.Infrastructure.Services.Facades;
 
 
 namespace BussinessLayer.Facades

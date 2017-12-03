@@ -270,6 +270,10 @@
       <Project>{4B08816A-0E3D-4090-BF45-CB964B6B66C5}</Project>
       <Name>BussinessLayer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Infrastructure\Riganti.Utils.Infrastructure.Services\Riganti.Utils.Infrastructure.Services.csproj">
+      <Project>{049128c8-f21f-489c-8fe4-7324be92b056}</Project>
+      <Name>Riganti.Utils.Infrastructure.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

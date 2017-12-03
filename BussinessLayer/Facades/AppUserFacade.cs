@@ -10,16 +10,17 @@ using BussinessLayer.QueryObjects.Common;
 using BussinessLayer.Services.AppUserService;
 using BussinessLayer.Services.StatusService;
 using Riganti.Utils.Infrastructure.Core;
+using Riganti.Utils.Infrastructure.Services.Facades;
 
 
 namespace BussinessLayer.Facades
 {
     public class AppUserFacade : FacadeBase
     {
-        private readonly IAppUserService appUserService;
+        private readonly AppUserService appUserService;
         //private readonly IStatusService statusService;
 
-        public AppUserFacade(IUnitOfWorkProvider unitOfWorkProvider, IAppUserService appUserService) : base(unitOfWorkProvider)
+        public AppUserFacade(IUnitOfWorkProvider unitOfWorkProvider, AppUserService appUserService) : base(unitOfWorkProvider)
         {
             this.appUserService = appUserService;
         }

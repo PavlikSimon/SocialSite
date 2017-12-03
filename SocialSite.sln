@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI.Tests", "WebAPI.Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialSite", "SocialSite\SocialSite.csproj", "{4D9CF4DE-FE87-4134-B849-A335491380A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{FEE9BE3E-AF5A-4A15-BA53-1925FA78A502}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{4D9CF4DE-FE87-4134-B849-A335491380A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D9CF4DE-FE87-4134-B849-A335491380A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D9CF4DE-FE87-4134-B849-A335491380A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEE9BE3E-AF5A-4A15-BA53-1925FA78A502}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEE9BE3E-AF5A-4A15-BA53-1925FA78A502}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEE9BE3E-AF5A-4A15-BA53-1925FA78A502}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEE9BE3E-AF5A-4A15-BA53-1925FA78A502}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

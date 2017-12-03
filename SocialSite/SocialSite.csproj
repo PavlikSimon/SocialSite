@@ -301,6 +301,10 @@
       <Project>{A0E083F9-3E3E-4624-85CB-A5B0FB5D276D}</Project>
       <Name>Riganti.Utils.Infrastructure.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Infrastructure\Riganti.Utils.Infrastructure.Services\Riganti.Utils.Infrastructure.Services.csproj">
+      <Project>{049128c8-f21f-489c-8fe4-7324be92b056}</Project>
+      <Name>Riganti.Utils.Infrastructure.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

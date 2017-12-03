@@ -34,7 +34,7 @@ namespace Riganti.Utils.Infrastructure.Services.Facades
         /// <summary>
         /// Initializes a new instance of the <see cref="CrudFacadeBase{TEntity, TKey, TListDTO, TDetailDTO}"/> class.
         /// </summary>
-        protected CrudFacadeBase(Func<IQuery<TListDTO>> queryFactory, IRepository<TEntity, TKey> repository, IEntityDTOMapper<TEntity, TDetailDTO> mapper)
+        protected CrudFacadeBase(Func<IQuery<TListDTO>> queryFactory, IRepository<TEntity, TKey> repository, IEntityDTOMapper<TEntity, TDetailDTO> mapper) 
         {
             QueryFactory = queryFactory;
             Repository = repository;
