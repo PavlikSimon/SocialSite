@@ -14,7 +14,7 @@ using QueryInfrastracture;
 
 namespace BussinessLayer.Services
 {
-    public abstract class CRUDBase<TEntity, TDto, TFilterDto> : ServiceBase, ICRUDBase<TEntity, TDto, TFilterDto>
+        public abstract class CRUDBase<TEntity, TDto, TFilterDto> : ServiceBase, ICRUDBase<TEntity, TDto, TFilterDto>
         where TFilterDto : FilterDtoBase, new()
         where TEntity : class, IEntity<int>, new()
         where TDto : DTOBase
